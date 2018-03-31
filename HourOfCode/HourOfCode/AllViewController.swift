@@ -9,6 +9,8 @@
 import UIKit
 
 class AllViewController: CollapsibleTableSectionViewController {
+    
+    let viewModel = AllViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,22 +21,22 @@ class AllViewController: CollapsibleTableSectionViewController {
 
 extension AllViewController: CollapsibleTableSectionDelegate {
     func numberOfSections(_ tableView: UITableView) -> Int {
-        return 10
+        return viewModel.dataSource.count
     }
     
     func collapsibleTableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return viewModel.numberOfRowsInSection(section: section)
     }
     
     func collapsibleTableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as UITableViewCell? ?? UITableViewCell(style: .default, reuseIdentifier: "Cell")
-        cell.textLabel?.text = "Cell Text"
+        cell.textLabel?.text = viewModel.titleForRowWithIndexPath(indexPath: indexPath)
         cell.accessoryType = .disclosureIndicator
         return cell
     }
     
     func collapsibleTableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Title"
+        return viewModel.titleForSection(section: section)
     }
     
     func shouldCollapseByDefault(_ tableView: UITableView) -> Bool {

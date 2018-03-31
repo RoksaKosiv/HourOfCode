@@ -17,6 +17,7 @@
 		6F3C4DE6206FD98C00F8B74C /* AllViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F3C4DE5206FD98C00F8B74C /* AllViewController.swift */; };
 		6F3C4DEA206FE0A600F8B74C /* CollapsibleTableSectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F3C4DE8206FE0A600F8B74C /* CollapsibleTableSectionViewController.swift */; };
 		6F3C4DEB206FE0A600F8B74C /* CollapsibleTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F3C4DE9206FE0A600F8B74C /* CollapsibleTableViewHeader.swift */; };
+		6F3C4DED206FEC6C00F8B74C /* AllViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F3C4DEC206FEC6C00F8B74C /* AllViewModel.swift */; };
 		7C1EA44C84D0F861B51F2559 /* Pods_HourOfCode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB3D060F3B64B337745A599F /* Pods_HourOfCode.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +56,7 @@
 		6F3C4DE5206FD98C00F8B74C /* AllViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllViewController.swift; sourceTree = "<group>"; };
 		6F3C4DE8206FE0A600F8B74C /* CollapsibleTableSectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollapsibleTableSectionViewController.swift; sourceTree = "<group>"; };
 		6F3C4DE9206FE0A600F8B74C /* CollapsibleTableViewHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollapsibleTableViewHeader.swift; sourceTree = "<group>"; };
+		6F3C4DEC206FEC6C00F8B74C /* AllViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllViewModel.swift; sourceTree = "<group>"; };
 		EB3D060F3B64B337745A599F /* Pods_HourOfCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HourOfCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3AEB4E83E354DBA3C8F8CD6 /* Pods-HourOfCode.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HourOfCode.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HourOfCode/Pods-HourOfCode.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -127,6 +129,7 @@
 				6F3C4D84206FBD5B00F8B74C /* Info.plist */,
 				6F3C4D7C206FBD5B00F8B74C /* HourOfCode.xcdatamodeld */,
 				6F3C4DE5206FD98C00F8B74C /* AllViewController.swift */,
+				6F3C4DEC206FEC6C00F8B74C /* AllViewModel.swift */,
 			);
 			path = HourOfCode;
 			sourceTree = "<group>";
@@ -360,6 +363,7 @@
 			files = (
 				6F3C4DEB206FE0A600F8B74C /* CollapsibleTableViewHeader.swift in Sources */,
 				6F3C4DEA206FE0A600F8B74C /* CollapsibleTableSectionViewController.swift in Sources */,
+				6F3C4DED206FEC6C00F8B74C /* AllViewModel.swift in Sources */,
 				6F3C4DE6206FD98C00F8B74C /* AllViewController.swift in Sources */,
 				6F3C4D7E206FBD5B00F8B74C /* HourOfCode.xcdatamodeld in Sources */,
 				6F3C4D76206FBD5B00F8B74C /* AppDelegate.swift in Sources */,

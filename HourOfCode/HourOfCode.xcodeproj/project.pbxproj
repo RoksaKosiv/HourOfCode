@@ -15,6 +15,7 @@
 		6F3C4D83206FBD5B00F8B74C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F3C4D81206FBD5B00F8B74C /* LaunchScreen.storyboard */; };
 		6F3C4D8E206FBD5B00F8B74C /* HourOfCodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F3C4D8D206FBD5B00F8B74C /* HourOfCodeTests.swift */; };
 		6F3C4D99206FBD5B00F8B74C /* HourOfCodeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F3C4D98206FBD5B00F8B74C /* HourOfCodeUITests.swift */; };
+		7C1EA44C84D0F861B51F2559 /* Pods_HourOfCode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB3D060F3B64B337745A599F /* Pods_HourOfCode.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04B1A2D9A0E7542601D6712B /* Pods-HourOfCode.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HourOfCode.release.xcconfig"; path = "Pods/Target Support Files/Pods-HourOfCode/Pods-HourOfCode.release.xcconfig"; sourceTree = "<group>"; };
 		6F3C4D72206FBD5B00F8B74C /* HourOfCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HourOfCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F3C4D75206FBD5B00F8B74C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6F3C4D77206FBD5B00F8B74C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +51,8 @@
 		6F3C4D94206FBD5B00F8B74C /* HourOfCodeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HourOfCodeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F3C4D98206FBD5B00F8B74C /* HourOfCodeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourOfCodeUITests.swift; sourceTree = "<group>"; };
 		6F3C4D9A206FBD5B00F8B74C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB3D060F3B64B337745A599F /* Pods_HourOfCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HourOfCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3AEB4E83E354DBA3C8F8CD6 /* Pods-HourOfCode.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HourOfCode.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HourOfCode/Pods-HourOfCode.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C1EA44C84D0F861B51F2559 /* Pods_HourOfCode.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +81,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		096DF1C880AE422CEA24BBD2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F3AEB4E83E354DBA3C8F8CD6 /* Pods-HourOfCode.debug.xcconfig */,
+				04B1A2D9A0E7542601D6712B /* Pods-HourOfCode.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		6F3C4D69206FBD5B00F8B74C = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +97,8 @@
 				6F3C4D8C206FBD5B00F8B74C /* HourOfCodeTests */,
 				6F3C4D97206FBD5B00F8B74C /* HourOfCodeUITests */,
 				6F3C4D73206FBD5B00F8B74C /* Products */,
+				096DF1C880AE422CEA24BBD2 /* Pods */,
+				D441FBCD446DECB9FF3FCECE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,6 +144,14 @@
 			path = HourOfCodeUITests;
 			sourceTree = "<group>";
 		};
+		D441FBCD446DECB9FF3FCECE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EB3D060F3B64B337745A599F /* Pods_HourOfCode.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +159,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6F3C4D9D206FBD5B00F8B74C /* Build configuration list for PBXNativeTarget "HourOfCode" */;
 			buildPhases = (
+				D3ADA4A2CB66AAE97830D3A8 /* [CP] Check Pods Manifest.lock */,
 				6F3C4D6E206FBD5B00F8B74C /* Sources */,
 				6F3C4D6F206FBD5B00F8B74C /* Frameworks */,
 				6F3C4D70206FBD5B00F8B74C /* Resources */,
+				DBA64FCD8A576D62E7E5B54C /* [CP] Embed Pods Frameworks */,
+				1C827D26E6A0BC442C7B8E73 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -256,6 +283,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1C827D26E6A0BC442C7B8E73 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HourOfCode/Pods-HourOfCode-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D3ADA4A2CB66AAE97830D3A8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HourOfCode-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DBA64FCD8A576D62E7E5B54C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-HourOfCode/Pods-HourOfCode-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HourOfCode/Pods-HourOfCode-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6F3C4D6E206FBD5B00F8B74C /* Sources */ = {
@@ -428,6 +509,7 @@
 		};
 		6F3C4D9E206FBD5B00F8B74C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3AEB4E83E354DBA3C8F8CD6 /* Pods-HourOfCode.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -442,6 +524,7 @@
 		};
 		6F3C4D9F206FBD5B00F8B74C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04B1A2D9A0E7542601D6712B /* Pods-HourOfCode.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

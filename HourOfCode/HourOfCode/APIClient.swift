@@ -52,7 +52,7 @@ class APIClient {
     lazy fileprivate var sessionManager: SessionManager = {
         let _sessionManager = SessionManager()
         if let _oauthHandler = oauthHandler {
-            _sessionManager.adapter = _oauthHandler
+           // _sessionManager.adapter = _oauthHandler
         }
         return _sessionManager
     }()
@@ -160,23 +160,7 @@ extension APIClient {
             fatalError()
         }
     }
-//
-//    func verifySignUp(parameters: JSONObject?, callback: @escaping (APIClientBoolCompletion)) {
-//        performRequest(method: .put, path: URLBuilder.verifyPath, parameters: parameters, headers: [:], callback: callback)
-//    }
-//    
-//    func resendVerificationCode(parameters: JSONObject?, callback: @escaping (APIClientBoolCompletion)) {
-//        performRequest(method: .put, path: URLBuilder.resendVerificationCodePath, parameters: parameters, headers: [:], callback: callback)
-//    }
-//    
-//    // Forgot Password
-//    func obtainChangePasswordCode(parameters: JSONObject?, callback: @escaping (APIClientBoolCompletion)) {
-//        performRequest(method: .put, path: URLBuilder.obtainChangePasswordCodePath, parameters: parameters, headers: nil, callback: callback)
-//    }
-//    
-//    func changePassword(parameters: JSONObject?, callback: @escaping (APIClientBoolCompletion)) {
-//        performRequest(method: .put, path: URLBuilder.changePasswordPath, parameters: parameters, headers: nil, callback: callback)
-//    }
+
 }
 
 

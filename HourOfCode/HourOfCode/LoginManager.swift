@@ -13,10 +13,6 @@ import UIKit
 
 class LoginManager {
     
-    
-    
-    
-    
     func signUp(username: String, email: String, password: String, completion: @escaping ((_ success: Bool, _ message: String) -> Void) ) {
         
         let parameters = [APIClientKeys.username: username,
@@ -51,7 +47,6 @@ class LoginManager {
                     let username = dataJSON[APIClientKeys.username] as? String,
                     let email = dataJSON[APIClientKeys.email] as? String {
                     
-//                    NStorageManager.shared.logInUser(withUsername: username, email: email)
                     
                     completion(true, _message)
                 } else {
@@ -65,44 +60,5 @@ class LoginManager {
         }
     }
     
-//    func signUp(parameters: JSONObject, completion: @escaping ((_ success: Bool, _ message: String) -> Void) ) {
-//        APIClient.sharedInstance.signUpRequest(parameters: parameters) { (success, dataJSON, message) in
-//            if success {
-//                let _message = message ?? "Sign Up Success"
-//                completion(true, _message)
-//            } else {
-//                let _message = message ?? "Sign Up Failed"
-//                completion(false, _message)
-//            }
-//        }
-//    }
-//
-//    func logOut() {
-//        StorageManager.shared.logOutAllUsers()
-//        NotificationCenter.default.post(name: .UserLoggedOut, object: nil, userInfo: nil)
-//    }
-//
-//    func sendVerificationCode(parameters: JSONObject, completion: @escaping ((_ success: Bool, _ message: String) -> Void) ) {
-//        APIClient.sharedInstance.verifySignUp(parameters: parameters) { (success, dataJSON, message) in
-//            if success {
-//                let _message = message ?? "Verification Success"
-//                completion(true, _message)
-//            } else {
-//                let _message = message ?? "Verification Failed"
-//                completion(false, _message)
-//            }
-//        }
-//    }
-//
-//    func resendVerificationCode(parameters: JSONObject, completion: @escaping ((_ success: Bool, _ message: String) -> Void) ) {
-//        APIClient.sharedInstance.resendVerificationCode(parameters: parameters) { (success, dataJSON, message) in
-//            if success {
-//                let _message = message ?? "Resend Code Success"
-//                completion(true, _message)
-//            } else {
-//                let _message = message ?? "Resend Code Failed"
-//                completion(false, _message)
-//            }
-//        }
-//    }
+
 }

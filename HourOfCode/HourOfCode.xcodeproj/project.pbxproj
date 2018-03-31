@@ -8,13 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		6F3C4D76206FBD5B00F8B74C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F3C4D75206FBD5B00F8B74C /* AppDelegate.swift */; };
-		6F3C4D78206FBD5B00F8B74C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F3C4D77206FBD5B00F8B74C /* ViewController.swift */; };
 		6F3C4D7B206FBD5B00F8B74C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F3C4D79206FBD5B00F8B74C /* Main.storyboard */; };
 		6F3C4D7E206FBD5B00F8B74C /* HourOfCode.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6F3C4D7C206FBD5B00F8B74C /* HourOfCode.xcdatamodeld */; };
 		6F3C4D80206FBD5B00F8B74C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F3C4D7F206FBD5B00F8B74C /* Assets.xcassets */; };
 		6F3C4D83206FBD5B00F8B74C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F3C4D81206FBD5B00F8B74C /* LaunchScreen.storyboard */; };
 		6F3C4D8E206FBD5B00F8B74C /* HourOfCodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F3C4D8D206FBD5B00F8B74C /* HourOfCodeTests.swift */; };
 		6F3C4D99206FBD5B00F8B74C /* HourOfCodeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F3C4D98206FBD5B00F8B74C /* HourOfCodeUITests.swift */; };
+		6F3C4DE6206FD98C00F8B74C /* AllViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F3C4DE5206FD98C00F8B74C /* AllViewController.swift */; };
+		6F3C4DEA206FE0A600F8B74C /* CollapsibleTableSectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F3C4DE8206FE0A600F8B74C /* CollapsibleTableSectionViewController.swift */; };
+		6F3C4DEB206FE0A600F8B74C /* CollapsibleTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F3C4DE9206FE0A600F8B74C /* CollapsibleTableViewHeader.swift */; };
 		7C1EA44C84D0F861B51F2559 /* Pods_HourOfCode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB3D060F3B64B337745A599F /* Pods_HourOfCode.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,7 +41,6 @@
 		04B1A2D9A0E7542601D6712B /* Pods-HourOfCode.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HourOfCode.release.xcconfig"; path = "Pods/Target Support Files/Pods-HourOfCode/Pods-HourOfCode.release.xcconfig"; sourceTree = "<group>"; };
 		6F3C4D72206FBD5B00F8B74C /* HourOfCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HourOfCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F3C4D75206FBD5B00F8B74C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6F3C4D77206FBD5B00F8B74C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6F3C4D7A206FBD5B00F8B74C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6F3C4D7D206FBD5B00F8B74C /* HourOfCode.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HourOfCode.xcdatamodel; sourceTree = "<group>"; };
 		6F3C4D7F206FBD5B00F8B74C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +52,9 @@
 		6F3C4D94206FBD5B00F8B74C /* HourOfCodeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HourOfCodeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F3C4D98206FBD5B00F8B74C /* HourOfCodeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourOfCodeUITests.swift; sourceTree = "<group>"; };
 		6F3C4D9A206FBD5B00F8B74C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6F3C4DE5206FD98C00F8B74C /* AllViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllViewController.swift; sourceTree = "<group>"; };
+		6F3C4DE8206FE0A600F8B74C /* CollapsibleTableSectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollapsibleTableSectionViewController.swift; sourceTree = "<group>"; };
+		6F3C4DE9206FE0A600F8B74C /* CollapsibleTableViewHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollapsibleTableViewHeader.swift; sourceTree = "<group>"; };
 		EB3D060F3B64B337745A599F /* Pods_HourOfCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HourOfCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3AEB4E83E354DBA3C8F8CD6 /* Pods-HourOfCode.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HourOfCode.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HourOfCode/Pods-HourOfCode.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -93,6 +97,7 @@
 		6F3C4D69206FBD5B00F8B74C = {
 			isa = PBXGroup;
 			children = (
+				6F3C4DE7206FE0A600F8B74C /* CollapsibleTableSectionViewController */,
 				6F3C4D74206FBD5B00F8B74C /* HourOfCode */,
 				6F3C4D8C206FBD5B00F8B74C /* HourOfCodeTests */,
 				6F3C4D97206FBD5B00F8B74C /* HourOfCodeUITests */,
@@ -116,12 +121,12 @@
 			isa = PBXGroup;
 			children = (
 				6F3C4D75206FBD5B00F8B74C /* AppDelegate.swift */,
-				6F3C4D77206FBD5B00F8B74C /* ViewController.swift */,
 				6F3C4D79206FBD5B00F8B74C /* Main.storyboard */,
 				6F3C4D7F206FBD5B00F8B74C /* Assets.xcassets */,
 				6F3C4D81206FBD5B00F8B74C /* LaunchScreen.storyboard */,
 				6F3C4D84206FBD5B00F8B74C /* Info.plist */,
 				6F3C4D7C206FBD5B00F8B74C /* HourOfCode.xcdatamodeld */,
+				6F3C4DE5206FD98C00F8B74C /* AllViewController.swift */,
 			);
 			path = HourOfCode;
 			sourceTree = "<group>";
@@ -142,6 +147,16 @@
 				6F3C4D9A206FBD5B00F8B74C /* Info.plist */,
 			);
 			path = HourOfCodeUITests;
+			sourceTree = "<group>";
+		};
+		6F3C4DE7206FE0A600F8B74C /* CollapsibleTableSectionViewController */ = {
+			isa = PBXGroup;
+			children = (
+				6F3C4DE8206FE0A600F8B74C /* CollapsibleTableSectionViewController.swift */,
+				6F3C4DE9206FE0A600F8B74C /* CollapsibleTableViewHeader.swift */,
+			);
+			name = CollapsibleTableSectionViewController;
+			path = HourOfCode/CollapsibleTableSectionViewController;
 			sourceTree = "<group>";
 		};
 		D441FBCD446DECB9FF3FCECE /* Frameworks */ = {
@@ -343,8 +358,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F3C4DEB206FE0A600F8B74C /* CollapsibleTableViewHeader.swift in Sources */,
+				6F3C4DEA206FE0A600F8B74C /* CollapsibleTableSectionViewController.swift in Sources */,
+				6F3C4DE6206FD98C00F8B74C /* AllViewController.swift in Sources */,
 				6F3C4D7E206FBD5B00F8B74C /* HourOfCode.xcdatamodeld in Sources */,
-				6F3C4D78206FBD5B00F8B74C /* ViewController.swift in Sources */,
 				6F3C4D76206FBD5B00F8B74C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

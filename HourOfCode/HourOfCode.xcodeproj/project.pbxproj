@@ -22,6 +22,7 @@
 		BB8D23392070123E009E7B47 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8D23382070123E009E7B47 /* LogInViewController.swift */; };
 		BB8D233B20701254009E7B47 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8D233A20701254009E7B47 /* SignUpViewController.swift */; };
 		BB8D233D2070301B009E7B47 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8D233C2070301B009E7B47 /* Extensions.swift */; };
+		BB8D233F2070455F009E7B47 /* TempStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB8D233E2070455F009E7B47 /* TempStoryboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		BB8D23382070123E009E7B47 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		BB8D233A20701254009E7B47 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		BB8D233C2070301B009E7B47 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		BB8D233E2070455F009E7B47 /* TempStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TempStoryboard.storyboard; sourceTree = "<group>"; };
 		EB3D060F3B64B337745A599F /* Pods_HourOfCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HourOfCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3AEB4E83E354DBA3C8F8CD6 /* Pods-HourOfCode.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HourOfCode.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HourOfCode/Pods-HourOfCode.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -140,6 +142,7 @@
 				BB8D23382070123E009E7B47 /* LogInViewController.swift */,
 				BB8D233A20701254009E7B47 /* SignUpViewController.swift */,
 				BB8D233C2070301B009E7B47 /* Extensions.swift */,
+				BB8D233E2070455F009E7B47 /* TempStoryboard.storyboard */,
 			);
 			path = HourOfCode;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 				6F3C4D83206FBD5B00F8B74C /* LaunchScreen.storyboard in Resources */,
 				6F3C4D80206FBD5B00F8B74C /* Assets.xcassets in Resources */,
 				6F3C4D7B206FBD5B00F8B74C /* Main.storyboard in Resources */,
+				BB8D233F2070455F009E7B47 /* TempStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

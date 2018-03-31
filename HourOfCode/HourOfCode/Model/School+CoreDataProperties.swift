@@ -16,7 +16,7 @@ extension School {
         return NSFetchRequest<School>(entityName: "School")
     }
 
-    @NSManaged public var address: Int64
+    @NSManaged public var address: String?
     @NSManaged public var id: Int64
     @NSManaged public var latitude: String?
     @NSManaged public var longitude: String?

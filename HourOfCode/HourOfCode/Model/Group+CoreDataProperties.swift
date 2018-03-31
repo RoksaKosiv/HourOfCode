@@ -18,7 +18,7 @@ extension Group {
 
     @NSManaged public var dateEnd: String?
     @NSManaged public var dateStart: String?
-    @NSManaged public var details: NSObject?
+    @NSManaged public var details: String?
     @NSManaged public var id: Int64
     @NSManaged public var name: String?
     @NSManaged public var tacherId: Int64

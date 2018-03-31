@@ -3,7 +3,7 @@
     <entity name="Group" representedClassName="Group" syncable="YES">
         <attribute name="dateEnd" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="dateStart" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="details" optional="YES" syncable="YES"/>
+        <attribute name="details" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="tacherId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
@@ -13,7 +13,7 @@
         <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="myGroups" inverseEntity="User" syncable="YES"/>
     </entity>
     <entity name="School" representedClassName="School" syncable="YES">
-        <attribute name="address" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="latitude" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="longitude" optional="YES" attributeType="String" syncable="YES"/>

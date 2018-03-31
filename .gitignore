@@ -1,0 +1,40 @@
+HourOfCode/Pods/Manifest.lock
+HourOfCode/Pods/Alamofire/LICENSE
+HourOfCode/Pods/Alamofire/README.md
+HourOfCode/Pods/Alamofire/Source/AFError.swift
+HourOfCode/Pods/Alamofire/Source/Alamofire.swift
+HourOfCode/Pods/Alamofire/Source/DispatchQueue+Alamofire.swift
+HourOfCode/Pods/Alamofire/Source/MultipartFormData.swift
+HourOfCode/Pods/Alamofire/Source/NetworkReachabilityManager.swift
+HourOfCode/Pods/Alamofire/Source/Notifications.swift
+HourOfCode/Pods/Alamofire/Source/ParameterEncoding.swift
+HourOfCode/Pods/Alamofire/Source/Request.swift
+HourOfCode/Pods/Alamofire/Source/Response.swift
+HourOfCode/Pods/Alamofire/Source/ResponseSerialization.swift
+HourOfCode/Pods/Alamofire/Source/Result.swift
+HourOfCode/Pods/Alamofire/Source/ServerTrustPolicy.swift
+HourOfCode/Pods/Alamofire/Source/SessionDelegate.swift
+HourOfCode/Pods/Alamofire/Source/SessionManager.swift
+HourOfCode/Pods/Alamofire/Source/TaskDelegate.swift
+HourOfCode/Pods/Alamofire/Source/Timeline.swift
+HourOfCode/Pods/Alamofire/Source/Validation.swift
+HourOfCode/Pods/Pods.xcodeproj/project.pbxproj
+HourOfCode/Pods/Pods.xcodeproj/xcuserdata/roksolana.xcuserdatad/xcschemes/Alamofire.xcscheme
+HourOfCode/Pods/Pods.xcodeproj/xcuserdata/roksolana.xcuserdatad/xcschemes/Pods-HourOfCode.xcscheme
+HourOfCode/Pods/Pods.xcodeproj/xcuserdata/roksolana.xcuserdatad/xcschemes/xcschememanagement.plist
+HourOfCode/Pods/Target Support Files/Alamofire/Alamofire-dummy.m
+HourOfCode/Pods/Target Support Files/Alamofire/Alamofire-prefix.pch
+HourOfCode/Pods/Target Support Files/Alamofire/Alamofire-umbrella.h
+HourOfCode/Pods/Target Support Files/Alamofire/Alamofire.modulemap
+HourOfCode/Pods/Target Support Files/Alamofire/Alamofire.xcconfig
+HourOfCode/Pods/Target Support Files/Alamofire/Info.plist
+HourOfCode/Pods/Target Support Files/Pods-HourOfCode/Info.plist
+HourOfCode/Pods/Target Support Files/Pods-HourOfCode/Pods-HourOfCode-acknowledgements.markdown
+HourOfCode/Pods/Target Support Files/Pods-HourOfCode/Pods-HourOfCode-acknowledgements.plist
+HourOfCode/Pods/Target Support Files/Pods-HourOfCode/Pods-HourOfCode-dummy.m
+HourOfCode/Pods/Target Support Files/Pods-HourOfCode/Pods-HourOfCode-frameworks.sh
+HourOfCode/Pods/Target Support Files/Pods-HourOfCode/Pods-HourOfCode-resources.sh
+HourOfCode/Pods/Target Support Files/Pods-HourOfCode/Pods-HourOfCode-umbrella.h
+HourOfCode/Pods/Target Support Files/Pods-HourOfCode/Pods-HourOfCode.debug.xcconfig
+HourOfCode/Pods/Target Support Files/Pods-HourOfCode/Pods-HourOfCode.modulemap
+HourOfCode/Pods/Target Support Files/Pods-HourOfCode/Pods-HourOfCode.release.xcconfig

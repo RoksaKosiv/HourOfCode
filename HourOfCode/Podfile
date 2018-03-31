@@ -5,4 +5,5 @@ platform :ios, '10.0'
 
 target 'HourOfCode' do
     pod 'Alamofire'
+    pod 'KeychainSwift'
 end

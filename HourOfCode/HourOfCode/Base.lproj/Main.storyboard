@@ -29,42 +29,11 @@
             </objects>
             <point key="canvasLocation" x="577" y="134"/>
         </scene>
-        <!--Settings-->
-        <scene sceneID="5uK-Ec-FYw">
-            <objects>
-                <viewController id="2mQ-Ud-cWc" customClass="SettingsViewController" customModule="HourOfCode" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="TQ8-yF-nnm">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YId-7W-M97">
-                                <rect key="frame" x="160" y="304" width="55" height="30"/>
-                                <state key="normal" title="Log Out">
-                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="logOutPressed:" destination="2mQ-Ud-cWc" eventType="touchUpInside" id="jW9-c0-FQr"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="YId-7W-M97" firstAttribute="centerX" secondItem="YLG-la-ISN" secondAttribute="centerX" id="UjF-Pe-9Gl"/>
-                            <constraint firstItem="YId-7W-M97" firstAttribute="centerY" secondItem="YLG-la-ISN" secondAttribute="centerY" id="l6e-38-tyT"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="YLG-la-ISN"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Settings" id="lmz-d5-qwp"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lGe-dO-NgH" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-780" y="578.86056971514245"/>
-        </scene>
-        <!--Item-->
+        <!--Reg for backup-->
         <scene sceneID="2g1-FS-3EF">
             <objects>
                 <navigationController id="0TF-e9-wfY" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="bOx-Pq-gQt"/>
+                    <tabBarItem key="tabBarItem" title="Reg for backup" image="batman" id="bOx-Pq-gQt"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="18a-JL-Jfj">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -96,7 +65,7 @@
         <!--My schedule-->
         <scene sceneID="8OH-s7-QzS">
             <objects>
-                <viewController id="2Iv-u4-Bcv" sceneMemberID="viewController">
+                <viewController id="2Iv-u4-Bcv" customClass="MyTimetableViewController" customModule="HourOfCode" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Jes-fn-LTs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -108,19 +77,25 @@
                         <nil key="title"/>
                         <barButtonItem key="backBarButtonItem" title="Back" id="3wq-0a-fQU"/>
                         <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="8tr-qc-Pxs">
-                            <rect key="frame" x="52" y="7" width="271" height="30"/>
+                            <rect key="frame" x="77" y="7" width="221" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <segments>
-                                <segment title="List" width="135"/>
-                                <segment title="Time" width="135"/>
+                                <segment title="List" width="110"/>
+                                <segment title="Time" width="110"/>
                             </segments>
                             <color key="tintColor" red="0.086333356799999997" green="0.68081384899999997" blue="0.73727160690000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         </segmentedControl>
+                        <barButtonItem key="rightBarButtonItem" image="exit" id="qxW-4z-G41">
+                            <color key="tintColor" red="0.086333356799999997" green="0.68081384899999997" blue="0.73727160690000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <action selector="logOutAction:" destination="2Iv-u4-Bcv" id="sni-kw-3R6"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oi2-Ob-fgz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1558" y="134"/>
+            <point key="canvasLocation" x="1557.5999999999999" y="133.5832083958021"/>
         </scene>
         <!--All-->
         <scene sceneID="6n7-zZ-OHj">
@@ -406,7 +381,6 @@
                         <segue destination="Orh-PJ-ldQ" kind="relationship" relationship="viewControllers" id="Mmj-Hm-RZY"/>
                         <segue destination="xa7-As-cnu" kind="relationship" relationship="viewControllers" id="FSW-xU-PJ8"/>
                         <segue destination="0TF-e9-wfY" kind="relationship" relationship="viewControllers" id="JAA-rZ-SO2"/>
-                        <segue destination="2mQ-Ud-cWc" kind="relationship" relationship="viewControllers" id="ZwX-TA-j8T"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aA4-Ex-TRy" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1125,6 +1099,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="batman" width="26" height="32"/>
+        <image name="exit" width="24" height="24"/>
         <image name="eye" width="16" height="16"/>
         <image name="eye_off" width="16" height="16"/>
         <image name="menu_icon" width="25" height="25"/>

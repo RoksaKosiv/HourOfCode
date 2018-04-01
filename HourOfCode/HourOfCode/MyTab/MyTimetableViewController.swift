@@ -8,13 +8,14 @@
 
 import UIKit
 
-class SettingsViewController: UIViewController {
+class MyTimetableViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
-
-    @IBAction func logOutPressed(_ sender: UIButton) {
+    
+    @IBAction func logOutAction(_ sender: Any) {
         APIClient.sharedInstance.logout()
         DispatchQueue.main.async {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -23,5 +24,6 @@ class SettingsViewController: UIViewController {
             UIApplication.shared.keyWindow?.rootViewController = loginViewController
         }
     }
+    
 
 }

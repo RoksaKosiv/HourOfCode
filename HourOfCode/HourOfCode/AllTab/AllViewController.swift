@@ -44,6 +44,7 @@ extension AllViewController: CollapsibleTableSectionDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as UITableViewCell? ?? UITableViewCell(style: .default, reuseIdentifier: "Cell")
         cell.textLabel?.text = viewModel.titleForRowWithIndexPath(indexPath: indexPath)
         cell.accessoryType = .disclosureIndicator
+        cell.selectionStyle = .none
         return cell
     }
     

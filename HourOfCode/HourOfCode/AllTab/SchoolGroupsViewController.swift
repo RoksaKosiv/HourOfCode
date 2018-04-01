@@ -26,7 +26,7 @@ class SchoolGroupsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-            DataManager.getSchoolGroups(id: 1, callback: { (success, groupsArray, errorString) in
+            DataManager.getSchoolGroups(id: school?.id ?? 0, callback: { (success, groupsArray, errorString) in
                 if success {
                     if let array = groupsArray {
                         self.dataSource.removeAll()

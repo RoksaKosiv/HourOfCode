@@ -200,8 +200,8 @@ extension APIClient {
         performAuthorizedRequest(method: .get, path: URLBuilder.schoolsPath, parameters: [:], headers: [:], callback: callback)
     }
     
-    func getSchool(id: Int64, callback: @escaping (APIClientBoolCompletion)) {
-        let path = URLBuilder.schoolsPath + "/\(id)"
+    func getSchoolGroups(id: Int64, callback: @escaping (APIClientBoolCompletion)) {
+        let path = URLBuilder.schoolsPath + "/\(id)/groups"
         performAuthorizedRequest(method: .get, path: path, parameters: [:], headers: [:], callback: callback)
     }
     

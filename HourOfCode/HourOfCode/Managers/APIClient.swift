@@ -211,15 +211,6 @@ extension APIClient {
         performAuthorizedRequest(method: .get, path: URLBuilder.schoolsPath, parameters: [:], headers: [:], callback: callback)
     }
     
-    func getMyGroups(callback: @escaping (APIClientBoolCompletion)) {
-        if let userId = keychainHandler.getUserId() {
-            let path = URLBuilder.getUserPath + "\(userId)"
-            //{"include": { "relation": "mentoring",  "scope": { "include": ["schools"]}}}
-            let params: JSONObject = ["filter" : ["include" : [ "relation" : "mentoring", "scope" : ["include": ["schools"]]]]]
-            performAuthorizedRequest(method: .get, path: path, parameters: params, headers: [:], callback: callback)
-        }
-    }
-    
     func getSchoolGroups(id: Int64, callback: @escaping (APIClientBoolCompletion)) {
         let path = URLBuilder.schoolsPath + "/\(id)/groups"
         performAuthorizedRequest(method: .get, path: path, parameters: [:], headers: [:], callback: callback)
@@ -245,9 +236,7 @@ extension APIClient {
         guard let id = keychainHandler.getUserId() else {
             fatalError()
         }
-        let params: JSONObject = ["filter" : ["include" : ["mentoring", "teaching"]]]
-        
-        
+        let params: JSONObject = ["filter" : ["include" : [ "relation" : "mentoring", "scope" : ["include": ["schools"]]]]]
         let path = URLBuilder.getUserPath + "\(id)"
         
         performAuthorizedRequest(method: .get, path: path, parameters: params, headers: [:], callback: callback)

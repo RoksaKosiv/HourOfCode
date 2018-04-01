@@ -21,6 +21,8 @@ struct GroupObject {
     let dateStart: Date?
     let dateEnd: Date?
     
+    var school: SchoolObject? = nil
+    
     init(data: JSONObject) {
         id = data["id"] as? Int64 ?? -1
         name = data["name"] as? String ?? ""
@@ -33,10 +35,18 @@ struct GroupObject {
         
         dateStart = Date.stringToDate(dateString: dateStartString)
         dateEnd = Date.stringToDate(dateString: dateEndString)
+        
+        if let schoolData = data["schools"] as? JSONObject{
+            school = SchoolObject(data: schoolData)
+        }
     }
     
     var startTimeString: String {
         return dateStart?.toString(format: "HH:mm") ?? ""
+    }
+    
+    var endTimeString: String {
+        return dateEnd?.toString(format: "HH:mm") ?? ""
     }
     
     var startDateString: String {

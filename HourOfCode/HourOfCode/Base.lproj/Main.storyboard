@@ -118,6 +118,11 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="aqF-qc-MHg" secondAttribute="trailing" id="yN7-xS-qhp"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="addressLabel" destination="aqF-qc-MHg" id="dad-G1-aeh"/>
+                                            <outlet property="schoolNameLabel" destination="q4b-8S-Evy" id="Ky6-R0-WT8"/>
+                                            <outlet property="timeLabel" destination="RnR-Kb-Iat" id="l0K-1a-MCW"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -145,6 +150,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="98P-Zn-Xd7" id="MjQ-xX-oew"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oi2-Ob-fgz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

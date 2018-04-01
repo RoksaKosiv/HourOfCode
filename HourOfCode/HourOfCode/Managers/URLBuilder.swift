@@ -30,7 +30,7 @@ class URLBuilder {
     
     static var getUserPath: String {
         get {
-            return baseURL + "/Users/"
+            return baseURL + "/users/"
         }
     }
     

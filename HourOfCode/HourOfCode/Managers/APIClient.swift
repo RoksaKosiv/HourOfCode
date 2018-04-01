@@ -213,7 +213,7 @@ extension APIClient {
         if let userId = keychainHandler.getUserId() {
             let path = URLBuilder.getUserPath + "\(userId)"
             //{"include": { "relation": "mentoring",  "scope": { "include": ["schools"]}}}
-            let params: JSONObject = ["filter" : ["include" : [ "relation" : "mentoring"]]]
+            let params: JSONObject = ["filter" : ["include" : [ "relation" : "mentoring", "scope" : ["include": ["schools"]]]]]
             performAuthorizedRequest(method: .get, path: path, parameters: params, headers: [:], callback: callback)
         }
     }

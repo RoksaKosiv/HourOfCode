@@ -46,6 +46,7 @@ class GroupDetailsViewController: UIViewController {
             self.schoolNameLabel.text = group.name
             self.timeLabel.text = group.startDateString + " " + group.startTimeString
             self.detailsLabel.text = group.details
+            
         }
         
         if let school = school {

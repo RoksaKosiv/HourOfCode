@@ -18,12 +18,15 @@ class MyTimetableViewController: UIViewController {
             }
         }
     }
-
+    
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         DataManager.getMyGroups { (success, groupsArray, errorMessage) in
             if let groups = groupsArray, success {
                 self.myGroups = groups
+                self.tableView.reloadData()
             }
         }
     }
@@ -43,7 +46,7 @@ class MyTimetableViewController: UIViewController {
 extension MyTimetableViewController: UITableViewDataSource, UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 5
+        return myGroups.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -52,15 +55,19 @@ extension MyTimetableViewController: UITableViewDataSource, UITableViewDelegate 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MyGroupCell", for: indexPath) as! MyGroupTableViewCell
+        let group = myGroups[indexPath.section]
+        cell.timeLabel.text = group.startDateString + " " + group.startTimeString + " - " + group.endTimeString
+        cell.addressLabel.text = group.school?.address
+        cell.schoolNameLabel.text = group.school?.name
         return cell
         
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //let group = myGroups[indexPath.section]
+        let group = myGroups[indexPath.section]
         let mainStoryboard: UIStoryboard? = UIStoryboard(name: "Main", bundle: nil)
         let vc = mainStoryboard?.instantiateViewController(withIdentifier: "GroupDetailsViewController") as! GroupDetailsViewController
-        //vc.group = group
+        vc.group = group
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }

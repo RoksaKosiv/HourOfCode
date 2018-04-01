@@ -56,8 +56,8 @@ class DataManager {
         
         apiClient.getMyGroups { (success, jsonObject, message) in
             if success,
-                let jsonObject = jsonObject,
-                let groupsArray = jsonObject[APIClientKeys.data] as? JSONArray {
+                let json = jsonObject,
+                let groupsArray = json["mentoring"] as? JSONArray {
                 var arrayOfGroups: [GroupObject] = []
                 for groupJson in groupsArray {
                     let group = GroupObject(data: groupJson)

@@ -11,7 +11,7 @@ import Foundation
 class URLBuilder {
     
     //****** DEBUG ******
-    static let baseURL = "https://hourofcode-dfxoscgxhb.now.sh/api" //"https://hourofcode-yulujwpfvg.now.sh/api" // "https://hourofcode-dlcsjamsms.now.sh/api"
+    static let baseURL = "https://hourofcode-fpdkliurwi.now.sh/api" //"https://hourofcode-yulujwpfvg.now.sh/api" // "https://hourofcode-dlcsjamsms.now.sh/api"
     
     //****** PRODUCTION ******
     //static let baseURL = ""
@@ -30,7 +30,7 @@ class URLBuilder {
     
     static var getUserPath: String {
         get {
-            return baseURL + "/Users/"
+            return baseURL + "/users/"
         }
     }
     

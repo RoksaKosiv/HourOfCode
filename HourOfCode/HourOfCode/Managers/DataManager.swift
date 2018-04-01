@@ -11,6 +11,7 @@ import Foundation
 class DataManager {
     static let apiClient = APIClient.sharedInstance
     
+    
     static func getDiscticts(callback: @escaping (_ success: Bool ,_ districtsArray: [DistrictObject]?, _ message: String?) -> Void) {
         
         apiClient.getDistricts { (success, jsonObject, message) in

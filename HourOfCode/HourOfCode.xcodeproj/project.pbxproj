@@ -22,6 +22,7 @@
 		6F3C4DED206FEC6C00F8B74C /* AllViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F3C4DEC206FEC6C00F8B74C /* AllViewModel.swift */; };
 		6F7A40942070C4DF00A38D6D /* GroupDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7A40932070C4DF00A38D6D /* GroupDetailsViewController.swift */; };
 		6F7A40962070CABD00A38D6D /* TeacherObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7A40952070CABD00A38D6D /* TeacherObject.swift */; };
+		6F7A40982070F8D000A38D6D /* MyGroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7A40972070F8D000A38D6D /* MyGroupTableViewCell.swift */; };
 		7C1EA44C84D0F861B51F2559 /* Pods_HourOfCode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB3D060F3B64B337745A599F /* Pods_HourOfCode.framework */; };
 		BB8D2330206FC95C009E7B47 /* URLBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8D232F206FC95C009E7B47 /* URLBuilder.swift */; };
 		BB8D2332206FC971009E7B47 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8D2331206FC971009E7B47 /* APIClient.swift */; };
@@ -77,6 +78,7 @@
 		6F3C4DEC206FEC6C00F8B74C /* AllViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllViewModel.swift; sourceTree = "<group>"; };
 		6F7A40932070C4DF00A38D6D /* GroupDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupDetailsViewController.swift; sourceTree = "<group>"; };
 		6F7A40952070CABD00A38D6D /* TeacherObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherObject.swift; sourceTree = "<group>"; };
+		6F7A40972070F8D000A38D6D /* MyGroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupTableViewCell.swift; sourceTree = "<group>"; };
 		BB8D232F206FC95C009E7B47 /* URLBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLBuilder.swift; sourceTree = "<group>"; };
 		BB8D2331206FC971009E7B47 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		BB8D2334206FE0C2009E7B47 /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
@@ -264,6 +266,7 @@
 			isa = PBXGroup;
 			children = (
 				BB8D234C2070B82E009E7B47 /* MyTimetableViewController.swift */,
+				6F7A40972070F8D000A38D6D /* MyGroupTableViewCell.swift */,
 			);
 			path = MyTab;
 			sourceTree = "<group>";
@@ -476,6 +479,7 @@
 				BB8D234320704FD9009E7B47 /* DataManager.swift in Sources */,
 				6F7A40962070CABD00A38D6D /* TeacherObject.swift in Sources */,
 				6F3C4DEB206FE0A600F8B74C /* CollapsibleTableViewHeader.swift in Sources */,
+				6F7A40982070F8D000A38D6D /* MyGroupTableViewCell.swift in Sources */,
 				6F3C4DEA206FE0A600F8B74C /* CollapsibleTableSectionViewController.swift in Sources */,
 				6F3C4DED206FEC6C00F8B74C /* AllViewModel.swift in Sources */,
 				6F3C4DE6206FD98C00F8B74C /* AllViewController.swift in Sources */,
@@ -662,6 +666,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q6X65JB28C;
 				INFOPLIST_FILE = "$(SRCROOT)/HourOfCode/Others/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kosiv.roksolana.HourOfCode;
@@ -680,6 +685,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q6X65JB28C;
 				INFOPLIST_FILE = "$(SRCROOT)/HourOfCode/Others/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kosiv.roksolana.HourOfCode;

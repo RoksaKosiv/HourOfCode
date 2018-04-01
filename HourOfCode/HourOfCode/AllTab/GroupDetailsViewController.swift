@@ -13,6 +13,7 @@ class GroupDetailsViewController: UIViewController {
     var group: GroupObject?
     var teacher: TeacherObject?
     var school: SchoolObject?
+    var isMyScheduleItem = false
 
     @IBOutlet weak var schoolNameLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
@@ -20,7 +21,8 @@ class GroupDetailsViewController: UIViewController {
     @IBOutlet weak var phoneNumberLabel: UITextField!
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var detailsLabel: UILabel!
-
+    @IBOutlet weak var buttonAction: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUIWithData()
@@ -30,7 +32,6 @@ class GroupDetailsViewController: UIViewController {
                 self.updateUIWithData()
             })
         }
-        
     }
     
     func updateUIWithData() {
@@ -42,10 +43,19 @@ class GroupDetailsViewController: UIViewController {
         self.teacherName.text = ""
         self.phoneNumberLabel.text = ""
         
+        if isMyScheduleItem {
+            self.buttonAction.backgroundColor = UIColor(hex: 0xFD4600, alpha: 1.0)
+            self.buttonAction.setTitle("Скасувати урок", for: .normal)
+        }else {
+            self.buttonAction.backgroundColor = UIColor(hex: 0x00ADBB, alpha: 1.0)
+            self.buttonAction.setTitle("Взяти урок", for: .normal)
+        }
+        
         if let group = group {
             self.schoolNameLabel.text = group.name
             self.timeLabel.text = group.startDateString + " " + group.startTimeString
             self.detailsLabel.text = group.details
+            
         }
         
         if let school = school {
@@ -59,4 +69,13 @@ class GroupDetailsViewController: UIViewController {
         
     }
 
+    @IBAction func manageSubscribtion(_ sender: Any) {
+        if let id = group?.id {
+            DataManager.subscribeToGroups(groupId: id, subscribe: !isMyScheduleItem, callback: { (success, error) in
+                self.navigationController?.popViewController(animated: true)
+            })
+        }
+    }
+    
+    
 }

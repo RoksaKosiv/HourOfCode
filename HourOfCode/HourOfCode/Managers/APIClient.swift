@@ -119,9 +119,6 @@ class APIClient {
                     return
                 }
                 
-                
-                
-                
                 //callback(true, json, message)
                 
             case .failure(let error):
@@ -239,9 +236,7 @@ extension APIClient {
         guard let id = keychainHandler.getUserId() else {
             fatalError()
         }
-        let params: JSONObject = ["filter" : ["include" : ["mentoring", "teaching"]]]
-        
-        
+        let params: JSONObject = ["filter" : ["include" : [ "relation" : "mentoring", "scope" : ["include": ["schools"]]]]]
         let path = URLBuilder.getUserPath + "\(id)"
         
         performAuthorizedRequest(method: .get, path: path, parameters: params, headers: [:], callback: callback)

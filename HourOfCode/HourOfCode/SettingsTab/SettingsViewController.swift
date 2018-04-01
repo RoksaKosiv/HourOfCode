@@ -26,10 +26,12 @@ class SettingsViewController: UIViewController {
     
     @IBAction func testPressed(_ sender: UIButton) {
         
-        
-        
+//        DataManager.subscribeToGroups(groupId: 1, subscribe: false) { (success, message) in
+//            print(success)
+//        }
+
         DataManager.getMyGroups { (success, myGroups, message) in
-            print(myGroups ?? "NO GROUPS")
+            print(myGroups ?? "NO GROUPS", myGroups!.count)
         }
     }
 

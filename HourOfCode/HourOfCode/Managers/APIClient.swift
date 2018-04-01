@@ -28,6 +28,7 @@ enum APIClientKeys {
     static let filter = "filter"
     static let id = "id"
     static let mentoring = "mentoring"
+    static let mentorId = "mentorId"
 }
 
 
@@ -246,7 +247,27 @@ extension APIClient {
         performAuthorizedRequest(method: .get, path: path, parameters: params, headers: [:], callback: callback)
     }
     
-    //{"include": ["mentoring", "teaching"]}
+    func subscribeToGroup(groupId: Int64, subscribe: Bool, callback: @escaping (APIClientBoolCompletion)) {
+        
+        guard let id = keychainHandler.getUserId() else {
+            fatalError()
+        }
+        
+        //let mentorId = subscribe ? id : 0
+        var params: JSONObject = [:]
+        
+        if subscribe {
+         params = [APIClientKeys.mentorId : id]
+        } else {
+            params = [APIClientKeys.mentorId : NSNull()]
+        }
+        
+        let path = URLBuilder.groupsPath + "/\(groupId)"
+        
+        performAuthorizedRequest(method: .patch, path: path, parameters: params, headers: [:], callback: callback)
+    }
+    
+    //{"include": ["mentoring", "teaching"]}  Groups/1
 }
 
 

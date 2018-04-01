@@ -126,6 +126,15 @@ class DataManager {
         
     }
     
+    static func subscribeToGroups(groupId: Int64, subscribe: Bool, callback: @escaping (_ success: Bool, _ message: String?) -> Void) {
+        
+        
+        apiClient.subscribeToGroup(groupId: groupId, subscribe: subscribe) { (success, jsonObject, message) in
+            callback(success, message)
+        }
+        
+    }
+    
     static func getTeacherForGroup(id: Int64, callback: @escaping (_ success: Bool ,_ teacher: TeacherObject?, _ message: String?) -> Void) {
         apiClient.getTeacherForGroup(id: id) { (success, jsonObject, message) in
             if success,

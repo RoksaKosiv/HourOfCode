@@ -53,14 +53,53 @@
                     <view key="view" contentMode="scaleToFill" id="vv7-8l-v5S">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J1e-Zb-fbR">
+                                <rect key="frame" x="37" y="179.5" width="300" height="119.5"/>
+                                <string key="text">Yes, I want to register
+for Backup team
+to save "Hour of code"
+if in danger</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="zaL-r5-HZ4">
+                                <rect key="frame" x="121" y="359" width="133" height="31"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iny-34-UmZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="29.5" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="CIn-AQ-xI2">
+                                        <rect key="frame" x="38.5" y="0.0" width="51" height="31"/>
+                                    </switch>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lZ4-w6-NMs">
+                                        <rect key="frame" x="96.5" y="0.0" width="36.5" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="J1e-Zb-fbR" firstAttribute="centerX" secondItem="78B-hG-YMk" secondAttribute="centerX" id="43g-bj-0Qp"/>
+                            <constraint firstItem="J1e-Zb-fbR" firstAttribute="centerY" secondItem="78B-hG-YMk" secondAttribute="centerY" multiplier="0.7" id="4SJ-vx-f5N"/>
+                            <constraint firstItem="zaL-r5-HZ4" firstAttribute="centerX" secondItem="78B-hG-YMk" secondAttribute="centerX" id="ang-pM-9vJ"/>
+                            <constraint firstItem="J1e-Zb-fbR" firstAttribute="width" secondItem="vv7-8l-v5S" secondAttribute="width" multiplier="0.8" id="fyl-4e-2Xv"/>
+                            <constraint firstItem="zaL-r5-HZ4" firstAttribute="top" secondItem="J1e-Zb-fbR" secondAttribute="bottom" constant="60" id="rJZ-2x-n3F"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="78B-hG-YMk"/>
                     </view>
                     <navigationItem key="navigationItem" title="Join board team" id="1KE-FQ-p8v"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rp1-ed-NrB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1558" y="993"/>
+            <point key="canvasLocation" x="1557.5999999999999" y="992.65367316341838"/>
         </scene>
         <!--My schedule-->
         <scene sceneID="8OH-s7-QzS">

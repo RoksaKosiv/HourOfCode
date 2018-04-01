@@ -26,32 +26,43 @@ class SchoolGroupsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-            DataManager.getSchoolGroups(id: school?.id ?? 0, callback: { (success, groupsArray, errorString) in
-                if success {
-                    if let array = groupsArray {
-                        self.dataSource.removeAll()
-                        for group in array {
-                            guard let d2 = group.dateStart else { return }
-                            let filtered = array.filter {
-                                guard let d = $0.dateStart  else { return false }
-                                return Date.ifSameDate(date1: d, date2: d2)
-                            }
-                            let section = GroupSection(title: group.startDateString, groups: filtered)
-                            if !self.dataSource.contains(where: {$0.title == section.title}) {
-                                self.dataSource.append(section)
-                            }
-                            self.tableView.reloadData()
-                        }
-                    }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        DataManager.getSchoolGroups(id: school?.id ?? 0, callback: { (success, groupsArray, errorString) in
+            if success {
+                if let array = groupsArray {
+                    self.dataSource.removeAll()
+                    self.dataSource = self.formDataSource(array: array)
+                    self.tableView.reloadData()
                 }
-            })
+            }
+        })
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? GroupDetailsViewController {
             vc.group = selectedGroup
             vc.school = school
+            vc.isMyScheduleItem = false
         }
+    }
+    
+    func formDataSource(array: [GroupObject]) -> [GroupSection] {
+        var sections: [GroupSection] = []
+        for group in array {
+            guard let d2 = group.dateStart else { return [] }
+            let filtered = array.filter {
+                guard let d = $0.dateStart  else { return false }
+                return Date.ifSameDate(date1: d, date2: d2)
+            }
+            let section = GroupSection(title: group.startDateString, groups: filtered)
+            if !sections.contains(where: {$0.title == section.title}) {
+                sections.append(section)
+            }
+        }
+        return sections
     }
 }
 

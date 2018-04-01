@@ -334,10 +334,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9tV-sf-i5j">
-                                <rect key="frame" x="82" y="454.5" width="211" height="32"/>
+                                <rect key="frame" x="72.5" y="454.5" width="230" height="43"/>
                                 <color key="backgroundColor" red="0.086333356799999997" green="0.68081384899999997" blue="0.73727160690000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="9tV-sf-i5j" secondAttribute="height" multiplier="659:100" id="wNq-LL-pEF"/>
+                                    <constraint firstAttribute="width" constant="230" id="NJ1-X8-uIc"/>
+                                    <constraint firstAttribute="height" constant="43" id="xxl-2W-Pby"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <state key="normal" title="Take it!">
@@ -348,6 +349,7 @@
                                 </state>
                                 <connections>
                                     <action selector="logInPressed:" destination="m9q-VV-Igb" eventType="touchUpInside" id="Xbs-gh-PqA"/>
+                                    <action selector="manageSubscribtion:" destination="Qh4-m6-myo" eventType="touchUpInside" id="EPh-In-NBF"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -364,7 +366,6 @@
                             <constraint firstItem="upi-tK-fzF" firstAttribute="leading" secondItem="6lG-9t-Cb1" secondAttribute="leading" constant="16" id="D5n-yi-lb1"/>
                             <constraint firstItem="Ywz-U7-WVs" firstAttribute="leading" secondItem="6lG-9t-Cb1" secondAttribute="leading" constant="16" id="DBo-i0-tOf"/>
                             <constraint firstItem="AMf-bi-BFk" firstAttribute="top" secondItem="tCX-Ms-f4e" secondAttribute="bottom" constant="5" id="FSU-7X-nYW"/>
-                            <constraint firstItem="9tV-sf-i5j" firstAttribute="width" secondItem="9tV-sf-i5j" secondAttribute="height" multiplier="659:100" id="GiE-OQ-VMm"/>
                             <constraint firstItem="9tV-sf-i5j" firstAttribute="top" secondItem="upi-tK-fzF" secondAttribute="bottom" constant="45" id="KeM-pO-XrR"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="tCX-Ms-f4e" secondAttribute="trailing" constant="20" symbolic="YES" id="M8c-KG-MrR"/>
                             <constraint firstItem="OJV-7x-Hhs" firstAttribute="top" secondItem="6lG-9t-Cb1" secondAttribute="top" constant="16" id="NQ5-nr-gSM"/>
@@ -388,6 +389,7 @@
                     </view>
                     <connections>
                         <outlet property="addressLabel" destination="AMf-bi-BFk" id="Muq-Zh-ZYW"/>
+                        <outlet property="buttonAction" destination="9tV-sf-i5j" id="DRe-rD-KOE"/>
                         <outlet property="detailsLabel" destination="upi-tK-fzF" id="ehe-Vs-nD5"/>
                         <outlet property="phoneNumberLabel" destination="HjE-55-WRp" id="DrA-h7-rXc"/>
                         <outlet property="schoolNameLabel" destination="OJV-7x-Hhs" id="aVR-zY-rPh"/>
@@ -399,11 +401,11 @@
             </objects>
             <point key="canvasLocation" x="3374" y="-797"/>
         </scene>
-        <!--All-->
+        <!--Список шкіл-->
         <scene sceneID="F4I-Vi-vc3">
             <objects>
                 <navigationController id="Orh-PJ-ldQ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="All" image="menu_icon" id="ZBw-bS-pPp"/>
+                    <tabBarItem key="tabBarItem" title="Список шкіл" image="menu_icon" id="ZBw-bS-pPp"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qBB-0T-T1y">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

@@ -23,6 +23,10 @@ class MyTimetableViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         DataManager.getMyGroups { (success, groupsArray, errorMessage) in
             if let groups = groupsArray, success {
                 self.myGroups = groups
@@ -68,6 +72,7 @@ extension MyTimetableViewController: UITableViewDataSource, UITableViewDelegate 
         let mainStoryboard: UIStoryboard? = UIStoryboard(name: "Main", bundle: nil)
         let vc = mainStoryboard?.instantiateViewController(withIdentifier: "GroupDetailsViewController") as! GroupDetailsViewController
         vc.group = group
+        vc.isMyScheduleItem  = true
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }

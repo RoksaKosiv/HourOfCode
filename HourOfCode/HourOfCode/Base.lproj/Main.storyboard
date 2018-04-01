@@ -150,7 +150,7 @@
                                 <segment title="Time" width="90"/>
                                 <segment title="Search" width="90"/>
                             </segments>
-                            <color key="tintColor" red="0.086333356799999997" green="0.68081384899999997" blue="0.73727160690000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <color key="tintColor" red="0.086274509803921567" green="0.68235294117647061" blue="0.73725490196078436" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         </segmentedControl>
                     </navigationItem>
                     <connections>
@@ -404,7 +404,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0jW-Wt-Eh6" userLabel="LogoContainer">
                                                 <rect key="frame" x="0.5" y="120.5" width="375" height="126.5"/>
                                                 <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ExD-oM-Sbb">
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="ExD-oM-Sbb">
                                                         <rect key="frame" x="150" y="0.0" width="75" height="75.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="ExD-oM-Sbb" secondAttribute="height" multiplier="1:1" id="S3T-Go-wWb"/>
@@ -509,7 +509,7 @@
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" secondItem="OyR-GO-Fyt" secondAttribute="height" multiplier="20:30" id="3fK-8b-WgN"/>
                                                                         </constraints>
-                                                                        <state key="normal" title="A">
+                                                                        <state key="normal">
                                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         </state>
                                                                         <state key="selected" image="eye_off"/>
@@ -553,7 +553,6 @@
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" secondItem="AeQ-Sz-bnB" secondAttribute="height" multiplier="20:30" id="DLg-cK-3cQ"/>
                                                                         </constraints>
-                                                                        <state key="normal" image="eye"/>
                                                                         <state key="selected" image="eye_off"/>
                                                                     </button>
                                                                 </subviews>
@@ -622,7 +621,7 @@
                                                                 <subviews>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9YG-5X-OxE">
                                                                         <rect key="frame" x="0.0" y="41.5" width="330" height="50"/>
-                                                                        <color key="backgroundColor" red="0.23529411759999999" green="0.68235294120000001" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <color key="backgroundColor" red="0.086274509803921567" green="0.68235294117647061" blue="0.73725490196078436" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" secondItem="9YG-5X-OxE" secondAttribute="height" multiplier="659:100" id="Z83-qn-B9F"/>
                                                                         </constraints>
@@ -761,7 +760,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="34d-4x-3FC" userLabel="LogoContainer">
                                                 <rect key="frame" x="0.5" y="77" width="375" height="126.5"/>
                                                 <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="S33-0U-JYn">
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="S33-0U-JYn">
                                                         <rect key="frame" x="150" y="0.0" width="75" height="75.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="S33-0U-JYn" secondAttribute="height" multiplier="1:1" id="m5V-9O-qav"/>
@@ -972,7 +971,7 @@
                                                                 <subviews>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HsJ-Sf-i6g">
                                                                         <rect key="frame" x="0.0" y="41.5" width="330" height="50"/>
-                                                                        <color key="backgroundColor" red="0.23529411759999999" green="0.68235294120000001" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <color key="backgroundColor" red="0.086274509803921567" green="0.68235294117647061" blue="0.73725490196078436" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" secondItem="HsJ-Sf-i6g" secondAttribute="height" multiplier="659:100" id="ndR-if-ZMg"/>
                                                                         </constraints>
@@ -1101,8 +1100,8 @@
     <resources>
         <image name="batman" width="26" height="32"/>
         <image name="exit" width="24" height="24"/>
-        <image name="eye" width="16" height="16"/>
         <image name="eye_off" width="16" height="16"/>
+        <image name="logo" width="512" height="512"/>
         <image name="menu_icon" width="25" height="25"/>
         <image name="user_icon" width="25" height="25"/>
     </resources>

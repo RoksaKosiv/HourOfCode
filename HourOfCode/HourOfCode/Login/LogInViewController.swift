@@ -59,15 +59,22 @@ class LogInViewController: UIViewController {
         
         loginManager.logIn(email: email, password: password) { (success, message) in
             if success {
-                self.presentOkAlertWithTitle(message, message: "", okActionHandler: { (_) in
-                    
-                })
+                self.performLoginTransition()
             } else {
                 self.presentOkAlertWithTitle(message, message: "", okActionHandler: { (_) in
                     
                 })
             }
             print(message)
+        }
+    }
+    
+    fileprivate func performLoginTransition() {
+        DispatchQueue.main.async {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let baseTabBarController = storyboard.instantiateViewController(withIdentifier: "BaseTabBarController")
+            UIApplication.shared.delegate?.window??.rootViewController?.dismiss(animated: false, completion: nil)
+            UIApplication.shared.keyWindow?.rootViewController = baseTabBarController
         }
     }
     

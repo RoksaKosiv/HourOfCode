@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="d4R-bB-UlW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -28,6 +28,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HS7-bj-cVX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="577" y="134"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="5uK-Ec-FYw">
+            <objects>
+                <viewController id="2mQ-Ud-cWc" customClass="SettingsViewController" customModule="HourOfCode" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TQ8-yF-nnm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YId-7W-M97">
+                                <rect key="frame" x="160" y="304" width="55" height="30"/>
+                                <state key="normal" title="Log Out">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="logOutPressed:" destination="2mQ-Ud-cWc" eventType="touchUpInside" id="jW9-c0-FQr"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YId-7W-M97" firstAttribute="centerX" secondItem="YLG-la-ISN" secondAttribute="centerX" id="UjF-Pe-9Gl"/>
+                            <constraint firstItem="YId-7W-M97" firstAttribute="centerY" secondItem="YLG-la-ISN" secondAttribute="centerY" id="l6e-38-tyT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="YLG-la-ISN"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Settings" id="lmz-d5-qwp"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lGe-dO-NgH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-780" y="578.86056971514245"/>
         </scene>
         <!--Item-->
         <scene sceneID="2g1-FS-3EF">
@@ -318,7 +349,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="Wga-Pl-Ugz">
             <objects>
-                <tabBarController id="d4R-bB-UlW" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="BaseTabBarController" id="d4R-bB-UlW" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="NJ7-dd-CxM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -328,6 +359,7 @@
                         <segue destination="Orh-PJ-ldQ" kind="relationship" relationship="viewControllers" id="Mmj-Hm-RZY"/>
                         <segue destination="xa7-As-cnu" kind="relationship" relationship="viewControllers" id="FSW-xU-PJ8"/>
                         <segue destination="0TF-e9-wfY" kind="relationship" relationship="viewControllers" id="JAA-rZ-SO2"/>
+                        <segue destination="2mQ-Ud-cWc" kind="relationship" relationship="viewControllers" id="ZwX-TA-j8T"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aA4-Ex-TRy" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -410,7 +442,7 @@
                                                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7iA-nR-pN4" userLabel="EmailContainerView">
                                                                 <rect key="frame" x="0.0" y="0.0" width="330" height="73"/>
                                                                 <subviews>
-                                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="14" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="CXR-JZ-bzP" customClass="IndicatingTextField" customModule="HourOfCode" customModuleProvider="target">
+                                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Mentor2@hour-of-code.com" placeholder="Email" textAlignment="natural" minimumFontSize="14" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="CXR-JZ-bzP" customClass="IndicatingTextField" customModule="HourOfCode" customModuleProvider="target">
                                                                         <rect key="frame" x="4" y="22" width="322" height="51"/>
                                                                         <nil key="textColor"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -438,7 +470,7 @@
                                                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rqx-e9-Pu4" userLabel="PasswordContainerView">
                                                                 <rect key="frame" x="0.0" y="73" width="330" height="73"/>
                                                                 <subviews>
-                                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="14" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="LhU-CN-iW0" customClass="IndicatingTextField" customModule="HourOfCode" customModuleProvider="target">
+                                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="mentor" placeholder="Password" textAlignment="natural" minimumFontSize="14" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="LhU-CN-iW0" customClass="IndicatingTextField" customModule="HourOfCode" customModuleProvider="target">
                                                                         <rect key="frame" x="4" y="22" width="292" height="51"/>
                                                                         <nil key="textColor"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -1036,6 +1068,7 @@
                         <outlet property="confirmPasswordTextField" destination="4Pp-44-EmY" id="QIt-kC-ls8"/>
                         <outlet property="emailTextField" destination="wML-iG-ANY" id="Z6t-Ld-sjU"/>
                         <outlet property="passwordTextField" destination="wdB-3H-YlD" id="UzB-fv-Hlp"/>
+                        <outlet property="signUpButton" destination="HsJ-Sf-i6g" id="6HE-PM-gUa"/>
                         <outlet property="usernameTextField" destination="Naj-cU-fSs" id="lAX-zQ-gVA"/>
                     </connections>
                 </viewController>

@@ -58,9 +58,7 @@ class GroupDetailsViewController: UIViewController {
             
         }
         
-        if let school = school {
-            self.addressLabel.text = school.address
-        }
+        self.addressLabel.text = school?.address
         
         if let teacher = teacher {
             self.teacherName.text = teacher.username
@@ -73,6 +71,10 @@ class GroupDetailsViewController: UIViewController {
         if let id = group?.id {
             DataManager.subscribeToGroups(groupId: id, subscribe: !isMyScheduleItem, callback: { (success, error) in
                 self.navigationController?.popViewController(animated: true)
+                if self.isMyScheduleItem == false {
+                    let item = self.tabBarController?.tabBar.items![1]
+                    item?.badgeValue = "1"
+                }
             })
         }
     }

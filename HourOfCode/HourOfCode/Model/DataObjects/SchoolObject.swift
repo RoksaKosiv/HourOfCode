@@ -20,7 +20,7 @@ struct SchoolObject {
     init(data: JSONObject) {
         id = data["id"] as? Int64 ?? -1
         name = data["name"] as? String ?? ""
-        address = data["address"] as? String ?? ""
+        address = data["address"] as? String ?? "м.Львів, вул. Степана Бандери, 12"
         latitude = data["latitude"] as? String ?? ""
         longitude = data["longitude"] as? String ?? ""
         groups = parseSchoolArray(jsonObject: data)

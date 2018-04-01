@@ -33,6 +33,9 @@ class MyTimetableViewController: UIViewController {
                 self.tableView.reloadData()
             }
         }
+        
+        let item = self.tabBarController?.tabBar.items?[1]
+        item?.badgeValue = nil
     }
     
     @IBAction func logOutAction(_ sender: Any) {
@@ -62,7 +65,7 @@ extension MyTimetableViewController: UITableViewDataSource, UITableViewDelegate 
         let group = myGroups[indexPath.section]
         cell.timeLabel.text = group.startDateString + " " + group.startTimeString + " - " + group.endTimeString
         cell.addressLabel.text = group.school?.address
-        cell.schoolNameLabel.text = group.school?.name
+        cell.schoolNameLabel.text = (group.school?.name ?? "") + ", " + (group.name ?? "")
         return cell
         
     }

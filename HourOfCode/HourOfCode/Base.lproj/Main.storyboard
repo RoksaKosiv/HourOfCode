@@ -334,11 +334,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9tV-sf-i5j">
-                                <rect key="frame" x="72.5" y="454.5" width="230" height="43"/>
+                                <rect key="frame" x="22.5" y="454.5" width="330" height="50"/>
                                 <color key="backgroundColor" red="0.086333356799999997" green="0.68081384899999997" blue="0.73727160690000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="230" id="NJ1-X8-uIc"/>
-                                    <constraint firstAttribute="height" constant="43" id="xxl-2W-Pby"/>
+                                    <constraint firstAttribute="width" constant="330" id="NJ1-X8-uIc"/>
+                                    <constraint firstAttribute="height" constant="50" id="xxl-2W-Pby"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <state key="normal" title="Take it!">

@@ -70,11 +70,11 @@ class GroupDetailsViewController: UIViewController {
     @IBAction func manageSubscribtion(_ sender: Any) {
         if let id = group?.id {
             DataManager.subscribeToGroups(groupId: id, subscribe: !isMyScheduleItem, callback: { (success, error) in
-                self.navigationController?.popViewController(animated: true)
                 if self.isMyScheduleItem == false {
                     let item = self.tabBarController?.tabBar.items![1]
                     item?.badgeValue = "1"
                 }
+                self.navigationController?.popToRootViewController(animated: true)
             })
         }
     }

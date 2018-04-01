@@ -11,6 +11,7 @@ import Foundation
 class DataManager {
     static let apiClient = APIClient.sharedInstance
     
+    
     static func getDiscticts(callback: @escaping (_ success: Bool ,_ districtsArray: [DistrictObject]?, _ message: String?) -> Void) {
         
         apiClient.getDistricts { (success, jsonObject, message) in
@@ -49,6 +50,26 @@ class DataManager {
             }
         }
     
+    }
+    
+    static func getMyGroups(callback: @escaping (_ success: Bool ,_ groupsArray: [GroupObject]?, _ message: String?) -> Void) {
+        
+        apiClient.getMyGroups { (success, jsonObject, message) in
+            if success,
+                let jsonObject = jsonObject,
+                let groupsArray = jsonObject[APIClientKeys.data] as? JSONArray {
+                var arrayOfGroups: [GroupObject] = []
+                for groupJson in groupsArray {
+                    let group = GroupObject(data: groupJson)
+                    arrayOfGroups.append(group)
+                }
+                callback(success, arrayOfGroups, "Successfully Obtained School")
+                
+            } else {
+                callback(success, nil, nil)
+            }
+        }
+        
     }
     
     static func getSchoolGroups(id: Int64, callback: @escaping (_ success: Bool ,_ groupsArray: [GroupObject]?, _ message: String?) -> Void) {

@@ -117,9 +117,6 @@ class APIClient {
                     return
                 }
                 
-                
-                
-                
                 //callback(true, json, message)
                 
             case .failure(let error):
@@ -210,6 +207,15 @@ extension APIClient {
     
     func getSchools(callback: @escaping (APIClientBoolCompletion)) {
         performAuthorizedRequest(method: .get, path: URLBuilder.schoolsPath, parameters: [:], headers: [:], callback: callback)
+    }
+    
+    func getMyGroups(callback: @escaping (APIClientBoolCompletion)) {
+        if let userId = keychainHandler.getUserId() {
+            let path = URLBuilder.getUserPath + "\(userId)"
+            //{"include": { "relation": "mentoring",  "scope": { "include": ["schools"]}}}
+            let params: JSONObject = ["filter" : ["include" : [ "relation" : "mentoring"]]]
+            performAuthorizedRequest(method: .get, path: path, parameters: params, headers: [:], callback: callback)
+        }
     }
     
     func getSchoolGroups(id: Int64, callback: @escaping (APIClientBoolCompletion)) {

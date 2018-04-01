@@ -46,6 +46,12 @@ class URLBuilder {
         }
     }
     
+    static var teacherPath: String {
+        get {
+            return baseURL + "/teacher"
+        }
+    }
+    
     static var groupsPath: String {
         get {
             return baseURL + "/Groups"

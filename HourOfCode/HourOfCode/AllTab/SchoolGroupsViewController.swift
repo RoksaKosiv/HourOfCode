@@ -50,6 +50,7 @@ class SchoolGroupsViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? GroupDetailsViewController {
             vc.group = selectedGroup
+            vc.school = school
         }
     }
 }
@@ -76,6 +77,7 @@ extension SchoolGroupsViewController: UITableViewDataSource, UITableViewDelegate
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedGroup = dataSource[indexPath.section].groups[indexPath.row]
+        performSegue(withIdentifier: "GroupDetails", sender: self)
     }
     
 }

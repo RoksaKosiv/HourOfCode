@@ -93,7 +93,6 @@ class DataManager {
     }
     
     static func getGroup(id: Int64, callback: @escaping (_ success: Bool ,_ group: GroupObject?, _ message: String?) -> Void) {
-        
         apiClient.getGroup(id: id) { (success, jsonObject, message) in
             if success,
                 let jsonObject = jsonObject {
@@ -105,7 +104,20 @@ class DataManager {
                 callback(success, nil, nil)
             }
         }
-        
+    }
+    
+    static func getTeacherForGroup(id: Int64, callback: @escaping (_ success: Bool ,_ teacher: TeacherObject?, _ message: String?) -> Void) {
+        apiClient.getTeacherForGroup(id: id) { (success, jsonObject, message) in
+            if success,
+                let jsonObject = jsonObject {
+                let teacher = TeacherObject(data: jsonObject)
+                
+                callback(success, teacher, "Successfully Obtained Teacher")
+                
+            } else {
+                callback(success, nil, nil)
+            }
+        }
     }
     
 }

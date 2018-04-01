@@ -216,6 +216,11 @@ extension APIClient {
         performAuthorizedRequest(method: .get, path: path, parameters: [:], headers: [:], callback: callback)
     }
     
+    func getTeacherForGroup(id: Int64, callback: @escaping (APIClientBoolCompletion)) {
+        let path = URLBuilder.groupsPath + "/\(id)/teacher"
+        performAuthorizedRequest(method: .get, path: path, parameters: [:], headers: [:], callback: callback)
+    }
+    
 }
 
 

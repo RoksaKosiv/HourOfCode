@@ -33,6 +33,9 @@
 		BB8D233B20701254009E7B47 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8D233A20701254009E7B47 /* SignUpViewController.swift */; };
 		BB8D233D2070301B009E7B47 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8D233C2070301B009E7B47 /* Extensions.swift */; };
 		BB8D233F2070455F009E7B47 /* TempStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB8D233E2070455F009E7B47 /* TempStoryboard.storyboard */; };
+		BB8D234320704FD9009E7B47 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8D234220704FD9009E7B47 /* DataManager.swift */; };
+		BB8D2348207058FF009E7B47 /* SchoolObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8D2347207058FF009E7B47 /* SchoolObject.swift */; };
+		BB8D234A2070627B009E7B47 /* GroupObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8D23492070627B009E7B47 /* GroupObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +88,9 @@
 		BB8D233A20701254009E7B47 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		BB8D233C2070301B009E7B47 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		BB8D233E2070455F009E7B47 /* TempStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TempStoryboard.storyboard; sourceTree = "<group>"; };
+		BB8D234220704FD9009E7B47 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		BB8D2347207058FF009E7B47 /* SchoolObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolObject.swift; sourceTree = "<group>"; };
+		BB8D23492070627B009E7B47 /* GroupObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupObject.swift; sourceTree = "<group>"; };
 		EB3D060F3B64B337745A599F /* Pods_HourOfCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HourOfCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3AEB4E83E354DBA3C8F8CD6 /* Pods-HourOfCode.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HourOfCode.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HourOfCode/Pods-HourOfCode.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -160,6 +166,7 @@
 				6F3C4DE5206FD98C00F8B74C /* AllViewController.swift */,
 				6F3C4DEC206FEC6C00F8B74C /* AllViewModel.swift */,
 				BB8D232F206FC95C009E7B47 /* URLBuilder.swift */,
+				BB8D234220704FD9009E7B47 /* DataManager.swift */,
 				BB8D2331206FC971009E7B47 /* APIClient.swift */,
 				BB8D2334206FE0C2009E7B47 /* LoginManager.swift */,
 				BB8D2336206FE3FF009E7B47 /* VRTestViewController.swift */,
@@ -202,6 +209,7 @@
 		6F3C4DEE2070116500F8B74C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BB8D2346207058D0009E7B47 /* DataObjects */,
 				6F3C4DF2207011D300F8B74C /* Group+CoreDataClass.swift */,
 				6F3C4DEF207011D300F8B74C /* Group+CoreDataProperties.swift */,
 				6F3C4DF0207011D300F8B74C /* User+CoreDataClass.swift */,
@@ -210,6 +218,15 @@
 				6F3C4DF1207011D300F8B74C /* School+CoreDataProperties.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		BB8D2346207058D0009E7B47 /* DataObjects */ = {
+			isa = PBXGroup;
+			children = (
+				BB8D2347207058FF009E7B47 /* SchoolObject.swift */,
+				BB8D23492070627B009E7B47 /* GroupObject.swift */,
+			);
+			path = DataObjects;
 			sourceTree = "<group>";
 		};
 		D441FBCD446DECB9FF3FCECE /* Frameworks */ = {
@@ -413,6 +430,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6F3C4DF7207011D300F8B74C /* School+CoreDataProperties.swift in Sources */,
+				BB8D234320704FD9009E7B47 /* DataManager.swift in Sources */,
 				6F3C4DEB206FE0A600F8B74C /* CollapsibleTableViewHeader.swift in Sources */,
 				6F3C4DEA206FE0A600F8B74C /* CollapsibleTableSectionViewController.swift in Sources */,
 				6F3C4DED206FEC6C00F8B74C /* AllViewModel.swift in Sources */,
@@ -429,8 +447,10 @@
 				6F3C4D76206FBD5B00F8B74C /* AppDelegate.swift in Sources */,
 				6F3C4DFA207011D300F8B74C /* School+CoreDataClass.swift in Sources */,
 				6F3C4DF6207011D300F8B74C /* User+CoreDataClass.swift in Sources */,
+				BB8D234A2070627B009E7B47 /* GroupObject.swift in Sources */,
 				6F3C4DF5207011D300F8B74C /* Group+CoreDataProperties.swift in Sources */,
 				BB8D2335206FE0C3009E7B47 /* LoginManager.swift in Sources */,
+				BB8D2348207058FF009E7B47 /* SchoolObject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

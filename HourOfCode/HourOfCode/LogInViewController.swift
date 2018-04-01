@@ -71,5 +71,23 @@ class LogInViewController: UIViewController {
             print(message)
         }
     }
+    
+    @IBAction func testPressed(_ sender: UIButton) {
+        let dataManager = DataManager()
+//        dataManager.getSchools { (success, schools, message) in
+//            print(schools)
+//        }
+//        dataManager.getGroup(id: 1) { (success, group, message) in
+//            if let group = group {
+//                print(group)
+//            }
+//        }
+        
+        dataManager.getSchool(id: 1) { (success, school, message) in
+            if let school = school {
+                print(school)
+            }
+        }
+    }
 
 }

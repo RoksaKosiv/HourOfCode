@@ -24,6 +24,8 @@ enum APIClientKeys {
     static let password = "password"
     static let email = "email"
     static let accessToken = "id"
+    static let filter = "filter"
+    static let id = "id"
 }
 
 
@@ -71,6 +73,19 @@ class APIClient {
 //    }
     
     //MARK: - Base request
+    fileprivate func performAuthorizedRequest(method: HTTPMethod, path: String,
+                                    parameters: [String: Any]?, headers: [String: String]?,
+                                    callback: @escaping (APIClientBoolCompletion)) {
+        if let accessToken = keychainHandler.getAccessToken() {
+            let authPath =  path + "?access_token=" + accessToken
+            performRequest(method: method, path: authPath, parameters: parameters, headers: headers, callback: callback)
+        } else {
+            fatalError()
+        }
+        
+    }
+    
+    
     fileprivate func performRequest(method: HTTPMethod, path: String,
                                     parameters: [String: Any]?, headers: [String: String]?,
                                     callback: @escaping (APIClientBoolCompletion)) {
@@ -82,14 +97,29 @@ class APIClient {
             
             switch response.result {
             case .success:
-                guard let json = response.result.value as? JSONObject else {
-                        callback(false, nil, "Bad response JSON")
-                        return
-                }
-                var message = "Success"
+                
+//                guard let json = response.result.value as? JSONObject else {
+//                        callback(false, nil, "Bad response JSON")
+//                        return
+//                }
+                let message = "Success"
                 print(message)
                 
-                callback(true, json, message)
+                if let dataJSON = response.result.value as? JSONObject {
+                    callback(true, dataJSON, message)
+                    return
+                } else if let jsonArray = response.result.value as? JSONArray {
+                    callback(true, [APIClientKeys.data: jsonArray], message)
+                    return
+                } else {
+                    callback(true, nil, "Bad response JSON")
+                    return
+                }
+                
+                
+                
+                
+                //callback(true, json, message)
                 
             case .failure(let error):
                 let message = error.localizedDescription
@@ -160,7 +190,28 @@ extension APIClient {
             fatalError()
         }
     }
-
+    
+    
+    func getSchools(callback: @escaping (APIClientBoolCompletion)) {
+        performAuthorizedRequest(method: .get, path: URLBuilder.schoolsPath, parameters: [:], headers: [:], callback: callback)
+    }
+    
+    func getSchool(id: Int64, callback: @escaping (APIClientBoolCompletion)) {
+        let path = URLBuilder.schoolsPath + "/\(id)"
+        performAuthorizedRequest(method: .get, path: path, parameters: [:], headers: [:], callback: callback)
+    }
+    
+    func getGroups(callback: @escaping (APIClientBoolCompletion)) {
+        performAuthorizedRequest(method: .get, path: URLBuilder.groupsPath, parameters: [:], headers: [:], callback: callback)
+    }
+    
+    func getGroup(id: Int64, callback: @escaping (APIClientBoolCompletion)) {
+        
+        let path = URLBuilder.groupsPath + "/\(id)"
+        
+        performAuthorizedRequest(method: .get, path: path, parameters: [:], headers: [:], callback: callback)
+    }
+    
 }
 
 

@@ -6,7 +6,6 @@
 //  Copyright © 2018 Roksolana Kosiv. All rights reserved.
 //
 
-import Foundation
 
 import Foundation
 import UIKit

@@ -456,7 +456,13 @@
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" secondItem="OyR-GO-Fyt" secondAttribute="height" multiplier="20:30" id="3fK-8b-WgN"/>
                                                                         </constraints>
+                                                                        <state key="normal" title="A">
+                                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        </state>
                                                                         <state key="selected" image="eye_off"/>
+                                                                        <connections>
+                                                                            <action selector="testPressed:" destination="m9q-VV-Igb" eventType="touchUpInside" id="YFX-zN-8Tq"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                                 <constraints>

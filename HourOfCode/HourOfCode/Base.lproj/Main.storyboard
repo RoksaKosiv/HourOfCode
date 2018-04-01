@@ -76,6 +76,7 @@ if in danger</string>
                                     </label>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="CIn-AQ-xI2">
                                         <rect key="frame" x="38.5" y="0.0" width="51" height="31"/>
+                                        <color key="onTintColor" red="0.086274509799999996" green="0.68235294120000001" blue="0.73725490199999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </switch>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lZ4-w6-NMs">
                                         <rect key="frame" x="96.5" y="0.0" width="36.5" height="31"/>
@@ -722,7 +723,7 @@ if in danger</string>
                                                                 <subviews>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9YG-5X-OxE">
                                                                         <rect key="frame" x="0.0" y="41.5" width="330" height="50"/>
-                                                                        <color key="backgroundColor" red="0.086333356799999997" green="0.68081384899999997" blue="0.73727160690000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <color key="backgroundColor" red="0.086274509803921567" green="0.68235294117647061" blue="0.73725490196078436" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" secondItem="9YG-5X-OxE" secondAttribute="height" multiplier="659:100" id="Z83-qn-B9F"/>
                                                                         </constraints>
@@ -986,7 +987,7 @@ if in danger</string>
                                                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ipH-2R-EXq" userLabel="ConfirmPasswordContainerView">
                                                                 <rect key="frame" x="0.0" y="219" width="330" height="73"/>
                                                                 <subviews>
-                                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm password" textAlignment="natural" minimumFontSize="14" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="4Pp-44-EmY" customClass="IndicatingTextField" customModule="HourOfCode" customModuleProvider="target">
+                                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Phone" textAlignment="natural" minimumFontSize="14" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="4Pp-44-EmY" customClass="IndicatingTextField" customModule="HourOfCode" customModuleProvider="target">
                                                                         <rect key="frame" x="4" y="21.5" width="292" height="51.5"/>
                                                                         <nil key="textColor"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>

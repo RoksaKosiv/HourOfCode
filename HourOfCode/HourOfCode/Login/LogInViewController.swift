@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MBProgressHUD
 
 class LogInViewController: UIViewController {
     
@@ -57,7 +58,9 @@ class LogInViewController: UIViewController {
             return
         }
         
+        MBProgressHUD.showAnimated(onView: self.view)
         loginManager.logIn(email: email, password: password) { (success, message) in
+            MBProgressHUD.hideAnimated(forView: self.view)
             if success {
                 self.performLoginTransition()
             } else {

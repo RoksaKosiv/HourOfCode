@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MBProgressHUD
 
 class SignUpViewController: UIViewController {
     
@@ -68,7 +69,9 @@ class SignUpViewController: UIViewController {
                 return
         }
         
+        MBProgressHUD.showAnimated(onView: self.view)
         loginManager.signUp(username: username, email: email, password: password) { (success, message) in
+            MBProgressHUD.hideAnimated(forView: self.view)
             if success {
                 self.presentOkAlertWithTitle(message, message: "", okActionHandler: { (_) in
                     self.backToLogin(self.signUpButton)

@@ -41,19 +41,9 @@ class LoginManager {
         APIClient.sharedInstance.logInRequest(parameters: parameters) { (success, dataJSON, message) in
             if success {
                 let _message = message ?? "Sign In Success"
-                
-                if let dataJSON = dataJSON,
-                    let username = dataJSON[APIClientKeys.username] as? String,
-                    let email = dataJSON[APIClientKeys.email] as? String {
-                    
-                    
-                    completion(true, _message)
-                } else {
-                    completion(false, _message)
-                }
+                completion(true, _message)
             } else {
                 let _message = message ?? "Sign In Failed"
-                
                 completion(false, _message)
             }
         }

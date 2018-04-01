@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 import IQKeyboardManager
+import KeychainSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -22,7 +23,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.shared().isEnabled = true
         IQKeyboardManager.shared().toolbarDoneBarButtonItemText = "Hide"
         
+        
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        self.window?.rootViewController = createInitialViewController()
+        self.window?.makeKeyAndVisible()
+        
         return true
+    }
+    
+    fileprivate func createInitialViewController() -> UIViewController {
+//        KeychainSwift().clear()
+        
+        var initialVCIdentifier = String()
+        
+        if APIClient.sharedInstance.tokensExist(),
+            APIClient.sharedInstance.userIdExist() {
+            initialVCIdentifier = "BaseTabBarController"
+        } else {
+            initialVCIdentifier = "LogInViewController"
+        }
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let initialViewController = storyboard.instantiateViewController(withIdentifier: initialVCIdentifier)
+        
+        return initialViewController
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

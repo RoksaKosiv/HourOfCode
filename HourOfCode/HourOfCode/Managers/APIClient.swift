@@ -19,6 +19,7 @@ typealias APIClientBoolCompletion = (_ success: Bool, _ dataJSON: JSONObject?, _
 enum APIClientKeys {
     static let data = "data"
     static let username = "username"
+    static let userId = "userId"
     static let message = "message"
     static let code = "code"
     static let password = "password"
@@ -134,8 +135,17 @@ class APIClient {
         return keychainHandler.tokenExist
     }
     
+    func userIdExist() -> Bool {
+        return keychainHandler.userIdExist
+    }
+    
     fileprivate func clearTokens() {
         keychainHandler.clearAccessToken()
+        keychainHandler.clearUserId()
+    }
+    
+    func logout() {
+        clearTokens()
     }
 }
 
@@ -157,9 +167,11 @@ extension APIClient {
     
     fileprivate func updateTokens(_ dataJSON: JSONObject?, _ message: String?) -> (success: Bool, message: String?) {
         if let dataJSON = dataJSON,
-            let accessToken = dataJSON[APIClientKeys.accessToken] as? String {
+            let accessToken = dataJSON[APIClientKeys.accessToken] as? String,
+            let userId = dataJSON[APIClientKeys.userId] as? Int64 {
             
             keychainHandler.storeAccessToken(accessToken)
+            keychainHandler.storeUserId(userId)
             print("****** APP TOKEN WAS OBTAINED AND SAVED ******")
             return (true, message)
             
@@ -255,10 +267,21 @@ class OAuth2Handler: RequestAdapter {
 class KeychainHandler {
     
     let accessTokenKey = "accessToken"
+    let userIdKey = "userID"
     
     var tokenExist: Bool {
         get {
             if let _ = getAccessToken() {
+                return true
+            } else {
+                return false
+            }
+        }
+    }
+    
+    var userIdExist: Bool {
+        get {
+            if let _ = getUserId() {
                 return true
             } else {
                 return false
@@ -280,6 +303,26 @@ class KeychainHandler {
         let keychain = KeychainSwift()
         keychain.delete(accessTokenKey)
     }
+    
+    func storeUserId(_ id: Int64) {
+        let keychain = KeychainSwift()
+        keychain.set("\(id)", forKey: userIdKey)
+    }
+    
+    func getUserId() -> Int64? {
+        let keychain = KeychainSwift()
+        if let idString = keychain.get(userIdKey) {
+            return Int64(idString)
+        }else {
+            return nil
+        }
+    }
+    
+    func clearUserId() {
+        let keychain = KeychainSwift()
+        keychain.delete(userIdKey)
+    }
+    
     
     func clearKechain() {
         let keychain = KeychainSwift()

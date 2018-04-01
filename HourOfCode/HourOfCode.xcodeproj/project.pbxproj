@@ -34,6 +34,7 @@
 		BB8D234320704FD9009E7B47 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8D234220704FD9009E7B47 /* DataManager.swift */; };
 		BB8D2348207058FF009E7B47 /* SchoolObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8D2347207058FF009E7B47 /* SchoolObject.swift */; };
 		BB8D234A2070627B009E7B47 /* GroupObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8D23492070627B009E7B47 /* GroupObject.swift */; };
+		BB8D234D2070B82E009E7B47 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8D234C2070B82E009E7B47 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,7 @@
 		BB8D234220704FD9009E7B47 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		BB8D2347207058FF009E7B47 /* SchoolObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolObject.swift; sourceTree = "<group>"; };
 		BB8D23492070627B009E7B47 /* GroupObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupObject.swift; sourceTree = "<group>"; };
+		BB8D234C2070B82E009E7B47 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		EB3D060F3B64B337745A599F /* Pods_HourOfCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HourOfCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3AEB4E83E354DBA3C8F8CD6 /* Pods-HourOfCode.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HourOfCode.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HourOfCode/Pods-HourOfCode.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -200,6 +202,7 @@
 				6F1B4EFC20708C470046ED98 /* Login */,
 				6F3C4D79206FBD5B00F8B74C /* Main.storyboard */,
 				BB8D2336206FE3FF009E7B47 /* VRTestViewController.swift */,
+				BB8D234B2070B7FF009E7B47 /* SettingsTab */,
 				BB8D233C2070301B009E7B47 /* Extensions.swift */,
 				BB8D233E2070455F009E7B47 /* TempStoryboard.storyboard */,
 				6F1B4EFF20708C9B0046ED98 /* Others */,
@@ -253,6 +256,14 @@
 				6F7A40952070CABD00A38D6D /* TeacherObject.swift */,
 			);
 			path = DataObjects;
+			sourceTree = "<group>";
+		};
+		BB8D234B2070B7FF009E7B47 /* SettingsTab */ = {
+			isa = PBXGroup;
+			children = (
+				BB8D234C2070B82E009E7B47 /* SettingsViewController.swift */,
+			);
+			path = SettingsTab;
 			sourceTree = "<group>";
 		};
 		D441FBCD446DECB9FF3FCECE /* Frameworks */ = {
@@ -479,6 +490,7 @@
 				BB8D234A2070627B009E7B47 /* GroupObject.swift in Sources */,
 				BB8D2335206FE0C3009E7B47 /* LoginManager.swift in Sources */,
 				BB8D2348207058FF009E7B47 /* SchoolObject.swift in Sources */,
+				BB8D234D2070B82E009E7B47 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

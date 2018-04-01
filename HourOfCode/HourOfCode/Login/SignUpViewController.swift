@@ -71,7 +71,7 @@ class SignUpViewController: UIViewController {
         loginManager.signUp(username: username, email: email, password: password) { (success, message) in
             if success {
                 self.presentOkAlertWithTitle(message, message: "", okActionHandler: { (_) in
-                    
+                    self.backToLogin(self.signUpButton)
                 })
             } else {
                 self.presentOkAlertWithTitle(message, message: "", okActionHandler: { (_) in

@@ -9,9 +9,9 @@
 import Foundation
 
 class DataManager {
-    let apiClient = APIClient.sharedInstance
+    static let apiClient = APIClient.sharedInstance
     
-    func getDiscticts(callback: @escaping (_ success: Bool ,_ districtsArray: [DistrictObject]?, _ message: String?) -> Void) {
+    static func getDiscticts(callback: @escaping (_ success: Bool ,_ districtsArray: [DistrictObject]?, _ message: String?) -> Void) {
         
         apiClient.getDistricts { (success, jsonObject, message) in
             if success,
@@ -31,7 +31,7 @@ class DataManager {
         
     }
     
-    func getSchools(callback: @escaping (_ success: Bool ,_ schoolsArray: [SchoolObject]?, _ message: String?) -> Void) {
+    static func getSchools(callback: @escaping (_ success: Bool ,_ schoolsArray: [SchoolObject]?, _ message: String?) -> Void) {
         
         apiClient.getSchools { (success, jsonObject, message) in
             if success,
@@ -51,14 +51,18 @@ class DataManager {
     
     }
     
-    func getSchool(id: Int64, callback: @escaping (_ success: Bool ,_ group: SchoolObject?, _ message: String?) -> Void) {
+    static func getSchoolGroups(id: Int64, callback: @escaping (_ success: Bool ,_ groupsArray: [GroupObject]?, _ message: String?) -> Void) {
         
-        apiClient.getSchool(id: id) { (success, jsonObject, message) in
+        apiClient.getSchoolGroups(id: id) { (success, jsonObject, message) in
             if success,
-                let jsonObject = jsonObject {
-                let school = SchoolObject(data: jsonObject)
-                
-                callback(success, school, "Successfully Obtained School")
+                let jsonObject = jsonObject,
+                let groupsArray = jsonObject[APIClientKeys.data] as? JSONArray {
+                var arrayOfGroups: [GroupObject] = []
+                for groupJson in groupsArray {
+                    let group = GroupObject(data: groupJson)
+                    arrayOfGroups.append(group)
+                }
+                callback(success, arrayOfGroups, "Successfully Obtained School")
                 
             } else {
                 callback(success, nil, nil)
@@ -68,7 +72,7 @@ class DataManager {
     }
     
     
-    func getGroups(callback: @escaping (_ success: Bool ,_ groupsArray: [GroupObject]?, _ message: String?) -> Void) {
+    static func getGroups(callback: @escaping (_ success: Bool ,_ groupsArray: [GroupObject]?, _ message: String?) -> Void) {
         
         apiClient.getGroups { (success, jsonObject, message) in
             if success,
@@ -88,7 +92,7 @@ class DataManager {
         
     }
     
-    func getGroup(id: Int64, callback: @escaping (_ success: Bool ,_ group: GroupObject?, _ message: String?) -> Void) {
+    static func getGroup(id: Int64, callback: @escaping (_ success: Bool ,_ group: GroupObject?, _ message: String?) -> Void) {
         
         apiClient.getGroup(id: id) { (success, jsonObject, message) in
             if success,

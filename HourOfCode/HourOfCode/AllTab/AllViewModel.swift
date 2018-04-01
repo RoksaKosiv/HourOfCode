@@ -23,8 +23,6 @@ enum DataSourceType: Int {
 
 class AllViewModel: NSObject {
     
-    let dataManager = DataManager()
-    
     var dataSource: [AllSection] = []
     var districtDataSource: [AllSection] = []
     var timeDataSource: [AllSection] = []
@@ -63,7 +61,7 @@ class AllViewModel: NSObject {
     }
     
     func loadDistrictsData(completion: @escaping (() -> Void)) {
-        dataManager.getDiscticts { (success, districts, erroString) in
+        DataManager.getDiscticts { (success, districts, erroString) in
             if success {
                 self.districtsArray = districts!
                 self.changeDataSource()

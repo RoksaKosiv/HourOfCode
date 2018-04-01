@@ -60,7 +60,22 @@ extension Dictionary {
 extension Date {
     static func stringToDate(dateString: String) -> Date? {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
         return dateFormatter.date(from: dateString)
+    }
+    
+    static func ifSameDate(date1: Date, date2: Date) -> Bool {
+        let calendar = NSCalendar.current
+        let startOfNow = calendar.startOfDay(for: date1)
+        let startOfTimeStamp = calendar.startOfDay(for: date2)
+        let components = calendar.dateComponents([.day], from: startOfNow, to: startOfTimeStamp)
+        let day = components.day!
+        return (day == 0)
+    }
+    
+    func toString(format: String) -> String? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = format
+        return dateFormatter.string(from: self)
     }
 }

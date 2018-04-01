@@ -11,6 +11,8 @@ import UIKit
 class AllViewController: CollapsibleTableSectionViewController {
     
     let viewModel = AllViewModel()
+    
+    var selectedSchool: SchoolObject?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +20,13 @@ class AllViewController: CollapsibleTableSectionViewController {
         self.delegate = self
         viewModel.loadAllTabsData {
             self._tableView.reloadData()
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? SchoolGroupsViewController {
+            vc.school = selectedSchool
+            selectedSchool = nil
         }
     }
 }
@@ -43,10 +52,11 @@ extension AllViewController: CollapsibleTableSectionDelegate {
     }
     
     func collapsibleTableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let item = viewModel.selectetRowAtIndexPath(indexPath: indexPath)
+        selectedSchool = viewModel.selectetRowAtIndexPath(indexPath: indexPath)
+        self.performSegue(withIdentifier: "GroupsSegue", sender: self)
     }
     
     func shouldCollapseByDefault(_ tableView: UITableView) -> Bool {
-        return true
+        return false
     }
 }

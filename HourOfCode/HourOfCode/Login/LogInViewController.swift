@@ -79,7 +79,7 @@ class LogInViewController: UIViewController {
     }
     
     @IBAction func testPressed(_ sender: UIButton) {
-        let dataManager = DataManager()
+
 //        dataManager.getSchools { (success, schools, message) in
 //            print(schools)
 //        }
@@ -89,7 +89,7 @@ class LogInViewController: UIViewController {
 //            }
 //        }
         
-        dataManager.getSchool(id: 1) { (success, school, message) in
+        DataManager.getSchoolGroups(id: 1) { (success, school, message) in
             if let school = school {
                 print(school)
             }

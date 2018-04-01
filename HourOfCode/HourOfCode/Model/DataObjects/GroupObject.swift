@@ -9,14 +9,17 @@
 import Foundation
 
 struct GroupObject {
-    let dateEnd: String
-    let dateStart: String
+    let dateEndString: String
+    let dateStartString: String
     let details: String
     let id: Int64
     let name: String
     let tacherId: Int64
     let schoolId: Int64
     let mentorId: Int64
+    
+    let dateStart: Date?
+    let dateEnd: Date?
     
     init(data: JSONObject) {
         id = data["id"] as? Int64 ?? -1
@@ -25,8 +28,19 @@ struct GroupObject {
         tacherId = data["teacherId"] as? Int64 ?? -1
         schoolId = data["schoolId"] as? Int64 ?? -1
         mentorId = data["mentorId"] as? Int64 ?? -1
-        dateEnd = data["dateEnd"] as? String ?? ""
-        dateStart = data["dateStart"] as? String ?? ""
+        dateEndString = data["dateEnd"] as? String ?? ""
+        dateStartString = data["dateStart"] as? String ?? ""
+        
+        dateStart = Date.stringToDate(dateString: dateStartString)
+        dateEnd = Date.stringToDate(dateString: dateEndString)
+    }
+    
+    var startTimeString: String {
+        return dateStart?.toString(format: "HH:mm") ?? ""
+    }
+    
+    var startDateString: String {
+        return dateStart?.toString(format: "EEEE, MMM d, yyyy") ?? ""
     }
 }
 

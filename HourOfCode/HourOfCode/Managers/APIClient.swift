@@ -27,6 +27,7 @@ enum APIClientKeys {
     static let accessToken = "id"
     static let filter = "filter"
     static let id = "id"
+    static let mentoring = "mentoring"
 }
 
 
@@ -233,6 +234,19 @@ extension APIClient {
         performAuthorizedRequest(method: .get, path: path, parameters: [:], headers: [:], callback: callback)
     }
     
+    func getMyGroups(callback: @escaping (APIClientBoolCompletion)) {
+        guard let id = keychainHandler.getUserId() else {
+            fatalError()
+        }
+        let params: JSONObject = ["filter" : ["include" : ["mentoring", "teaching"]]]
+        
+        
+        let path = URLBuilder.getUserPath + "\(id)"
+        
+        performAuthorizedRequest(method: .get, path: path, parameters: params, headers: [:], callback: callback)
+    }
+    
+    //{"include": ["mentoring", "teaching"]}
 }
 
 

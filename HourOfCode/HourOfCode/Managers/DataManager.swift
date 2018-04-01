@@ -106,6 +106,26 @@ class DataManager {
         }
     }
     
+    static func getMyGroups(callback: @escaping (_ success: Bool ,_ groupsArray: [GroupObject]?, _ message: String?) -> Void) {
+        
+        apiClient.getMyGroups { (success, jsonObject, message) in
+            if success,
+                let jsonObject = jsonObject,
+                let groupsArray = jsonObject[APIClientKeys.mentoring] as? JSONArray {
+                var arrayOfGroups: [GroupObject] = []
+                for groupJson in groupsArray {
+                    let group = GroupObject(data: groupJson)
+                    arrayOfGroups.append(group)
+                }
+                callback(success, arrayOfGroups, "Successfully Obtained My Groups")
+                
+            } else {
+                callback(success, [], nil)
+            }
+        }
+        
+    }
+    
     static func getTeacherForGroup(id: Int64, callback: @escaping (_ success: Bool ,_ teacher: TeacherObject?, _ message: String?) -> Void) {
         apiClient.getTeacherForGroup(id: id) { (success, jsonObject, message) in
             if success,

@@ -46,9 +46,18 @@
                                     <action selector="logOutPressed:" destination="2mQ-Ud-cWc" eventType="touchUpInside" id="jW9-c0-FQr"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZrB-Ne-AAf">
+                                <rect key="frame" x="169" y="377" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="testPressed:" destination="2mQ-Ud-cWc" eventType="touchUpInside" id="6FG-PR-PGD"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="ZrB-Ne-AAf" firstAttribute="centerX" secondItem="YId-7W-M97" secondAttribute="centerX" id="669-jK-9cu"/>
+                            <constraint firstItem="ZrB-Ne-AAf" firstAttribute="top" secondItem="YId-7W-M97" secondAttribute="bottom" constant="43" id="M4u-k2-ZCQ"/>
                             <constraint firstItem="YId-7W-M97" firstAttribute="centerX" secondItem="YLG-la-ISN" secondAttribute="centerX" id="UjF-Pe-9Gl"/>
                             <constraint firstItem="YId-7W-M97" firstAttribute="centerY" secondItem="YLG-la-ISN" secondAttribute="centerY" id="l6e-38-tyT"/>
                         </constraints>

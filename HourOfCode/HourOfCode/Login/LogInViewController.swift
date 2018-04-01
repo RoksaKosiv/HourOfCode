@@ -89,11 +89,12 @@ class LogInViewController: UIViewController {
 //            }
 //        }
         
-        DataManager.getSchoolGroups(id: 1) { (success, school, message) in
-            if let school = school {
-                print(school)
-            }
-        }
+//        DataManager.getSchoolGroups(id: 1) { (success, school, message) in
+//            if let school = school {
+//                print(school)
+//            }
+//        }
+       
     }
 
 }

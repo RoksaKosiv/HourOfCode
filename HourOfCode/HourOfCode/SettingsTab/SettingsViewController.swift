@@ -23,5 +23,14 @@ class SettingsViewController: UIViewController {
             UIApplication.shared.keyWindow?.rootViewController = loginViewController
         }
     }
+    
+    @IBAction func testPressed(_ sender: UIButton) {
+        
+        
+        
+        DataManager.getMyGroups { (success, myGroups, message) in
+            print(myGroups ?? "NO GROUPS")
+        }
+    }
 
 }

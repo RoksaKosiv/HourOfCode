@@ -16,6 +16,9 @@ class AllViewController: CollapsibleTableSectionViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.delegate = self
+        viewModel.loadAllTabsData {
+            self._tableView.reloadData()
+        }
     }
 }
 
@@ -37,6 +40,10 @@ extension AllViewController: CollapsibleTableSectionDelegate {
     
     func collapsibleTableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return viewModel.titleForSection(section: section)
+    }
+    
+    func collapsibleTableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let item = viewModel.selectetRowAtIndexPath(indexPath: indexPath)
     }
     
     func shouldCollapseByDefault(_ tableView: UITableView) -> Bool {

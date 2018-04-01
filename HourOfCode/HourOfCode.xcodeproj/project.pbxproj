@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6F2F84D520709EF400B755EA /* DistrictObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2F84D420709EF400B755EA /* DistrictObject.swift */; };
 		6F3C4D76206FBD5B00F8B74C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F3C4D75206FBD5B00F8B74C /* AppDelegate.swift */; };
 		6F3C4D7B206FBD5B00F8B74C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F3C4D79206FBD5B00F8B74C /* Main.storyboard */; };
 		6F3C4D7E206FBD5B00F8B74C /* HourOfCode.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6F3C4D7C206FBD5B00F8B74C /* HourOfCode.xcdatamodeld */; };
@@ -18,12 +19,6 @@
 		6F3C4DEA206FE0A600F8B74C /* CollapsibleTableSectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F3C4DE8206FE0A600F8B74C /* CollapsibleTableSectionViewController.swift */; };
 		6F3C4DEB206FE0A600F8B74C /* CollapsibleTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F3C4DE9206FE0A600F8B74C /* CollapsibleTableViewHeader.swift */; };
 		6F3C4DED206FEC6C00F8B74C /* AllViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F3C4DEC206FEC6C00F8B74C /* AllViewModel.swift */; };
-		6F3C4DF5207011D300F8B74C /* Group+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F3C4DEF207011D300F8B74C /* Group+CoreDataProperties.swift */; };
-		6F3C4DF6207011D300F8B74C /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F3C4DF0207011D300F8B74C /* User+CoreDataClass.swift */; };
-		6F3C4DF7207011D300F8B74C /* School+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F3C4DF1207011D300F8B74C /* School+CoreDataProperties.swift */; };
-		6F3C4DF8207011D300F8B74C /* Group+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F3C4DF2207011D300F8B74C /* Group+CoreDataClass.swift */; };
-		6F3C4DF9207011D300F8B74C /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F3C4DF3207011D300F8B74C /* User+CoreDataProperties.swift */; };
-		6F3C4DFA207011D300F8B74C /* School+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F3C4DF4207011D300F8B74C /* School+CoreDataClass.swift */; };
 		7C1EA44C84D0F861B51F2559 /* Pods_HourOfCode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB3D060F3B64B337745A599F /* Pods_HourOfCode.framework */; };
 		BB8D2330206FC95C009E7B47 /* URLBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8D232F206FC95C009E7B47 /* URLBuilder.swift */; };
 		BB8D2332206FC971009E7B47 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8D2331206FC971009E7B47 /* APIClient.swift */; };
@@ -57,6 +52,7 @@
 
 /* Begin PBXFileReference section */
 		04B1A2D9A0E7542601D6712B /* Pods-HourOfCode.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HourOfCode.release.xcconfig"; path = "Pods/Target Support Files/Pods-HourOfCode/Pods-HourOfCode.release.xcconfig"; sourceTree = "<group>"; };
+		6F2F84D420709EF400B755EA /* DistrictObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistrictObject.swift; sourceTree = "<group>"; };
 		6F3C4D72206FBD5B00F8B74C /* HourOfCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HourOfCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F3C4D75206FBD5B00F8B74C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6F3C4D7A206FBD5B00F8B74C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -74,12 +70,6 @@
 		6F3C4DE8206FE0A600F8B74C /* CollapsibleTableSectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollapsibleTableSectionViewController.swift; sourceTree = "<group>"; };
 		6F3C4DE9206FE0A600F8B74C /* CollapsibleTableViewHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollapsibleTableViewHeader.swift; sourceTree = "<group>"; };
 		6F3C4DEC206FEC6C00F8B74C /* AllViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllViewModel.swift; sourceTree = "<group>"; };
-		6F3C4DEF207011D300F8B74C /* Group+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Group+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		6F3C4DF0207011D300F8B74C /* User+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
-		6F3C4DF1207011D300F8B74C /* School+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "School+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		6F3C4DF2207011D300F8B74C /* Group+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Group+CoreDataClass.swift"; sourceTree = "<group>"; };
-		6F3C4DF3207011D300F8B74C /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		6F3C4DF4207011D300F8B74C /* School+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "School+CoreDataClass.swift"; sourceTree = "<group>"; };
 		BB8D232F206FC95C009E7B47 /* URLBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLBuilder.swift; sourceTree = "<group>"; };
 		BB8D2331206FC971009E7B47 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		BB8D2334206FE0C2009E7B47 /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
@@ -130,6 +120,46 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		6F1B4EFC20708C470046ED98 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				BB8D2334206FE0C2009E7B47 /* LoginManager.swift */,
+				BB8D23382070123E009E7B47 /* LogInViewController.swift */,
+				BB8D233A20701254009E7B47 /* SignUpViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		6F1B4EFD20708C570046ED98 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				BB8D232F206FC95C009E7B47 /* URLBuilder.swift */,
+				BB8D234220704FD9009E7B47 /* DataManager.swift */,
+				BB8D2331206FC971009E7B47 /* APIClient.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		6F1B4EFE20708C630046ED98 /* AllTab */ = {
+			isa = PBXGroup;
+			children = (
+				6F3C4DE5206FD98C00F8B74C /* AllViewController.swift */,
+				6F3C4DEC206FEC6C00F8B74C /* AllViewModel.swift */,
+			);
+			path = AllTab;
+			sourceTree = "<group>";
+		};
+		6F1B4EFF20708C9B0046ED98 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				6F3C4D75206FBD5B00F8B74C /* AppDelegate.swift */,
+				6F3C4D7F206FBD5B00F8B74C /* Assets.xcassets */,
+				6F3C4D81206FBD5B00F8B74C /* LaunchScreen.storyboard */,
+				6F3C4D84206FBD5B00F8B74C /* Info.plist */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
 		6F3C4D69206FBD5B00F8B74C = {
 			isa = PBXGroup;
 			children = (
@@ -157,23 +187,14 @@
 			isa = PBXGroup;
 			children = (
 				6F3C4DEE2070116500F8B74C /* Model */,
-				6F3C4D75206FBD5B00F8B74C /* AppDelegate.swift */,
+				6F1B4EFE20708C630046ED98 /* AllTab */,
+				6F1B4EFD20708C570046ED98 /* Managers */,
+				6F1B4EFC20708C470046ED98 /* Login */,
 				6F3C4D79206FBD5B00F8B74C /* Main.storyboard */,
-				6F3C4D7F206FBD5B00F8B74C /* Assets.xcassets */,
-				6F3C4D81206FBD5B00F8B74C /* LaunchScreen.storyboard */,
-				6F3C4D84206FBD5B00F8B74C /* Info.plist */,
-				6F3C4D7C206FBD5B00F8B74C /* HourOfCode.xcdatamodeld */,
-				6F3C4DE5206FD98C00F8B74C /* AllViewController.swift */,
-				6F3C4DEC206FEC6C00F8B74C /* AllViewModel.swift */,
-				BB8D232F206FC95C009E7B47 /* URLBuilder.swift */,
-				BB8D234220704FD9009E7B47 /* DataManager.swift */,
-				BB8D2331206FC971009E7B47 /* APIClient.swift */,
-				BB8D2334206FE0C2009E7B47 /* LoginManager.swift */,
 				BB8D2336206FE3FF009E7B47 /* VRTestViewController.swift */,
-				BB8D23382070123E009E7B47 /* LogInViewController.swift */,
-				BB8D233A20701254009E7B47 /* SignUpViewController.swift */,
 				BB8D233C2070301B009E7B47 /* Extensions.swift */,
 				BB8D233E2070455F009E7B47 /* TempStoryboard.storyboard */,
+				6F1B4EFF20708C9B0046ED98 /* Others */,
 			);
 			path = HourOfCode;
 			sourceTree = "<group>";
@@ -209,13 +230,8 @@
 		6F3C4DEE2070116500F8B74C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6F3C4D7C206FBD5B00F8B74C /* HourOfCode.xcdatamodeld */,
 				BB8D2346207058D0009E7B47 /* DataObjects */,
-				6F3C4DF2207011D300F8B74C /* Group+CoreDataClass.swift */,
-				6F3C4DEF207011D300F8B74C /* Group+CoreDataProperties.swift */,
-				6F3C4DF0207011D300F8B74C /* User+CoreDataClass.swift */,
-				6F3C4DF3207011D300F8B74C /* User+CoreDataProperties.swift */,
-				6F3C4DF4207011D300F8B74C /* School+CoreDataClass.swift */,
-				6F3C4DF1207011D300F8B74C /* School+CoreDataProperties.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -225,6 +241,7 @@
 			children = (
 				BB8D2347207058FF009E7B47 /* SchoolObject.swift */,
 				BB8D23492070627B009E7B47 /* GroupObject.swift */,
+				6F2F84D420709EF400B755EA /* DistrictObject.swift */,
 			);
 			path = DataObjects;
 			sourceTree = "<group>";
@@ -401,7 +418,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DBA64FCD8A576D62E7E5B54C /* [CP] Embed Pods Frameworks */ = {
@@ -412,10 +429,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-HourOfCode/Pods-HourOfCode-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
+				"${BUILT_PRODUCTS_DIR}/KeychainSwift/KeychainSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -429,26 +450,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6F3C4DF7207011D300F8B74C /* School+CoreDataProperties.swift in Sources */,
 				BB8D234320704FD9009E7B47 /* DataManager.swift in Sources */,
 				6F3C4DEB206FE0A600F8B74C /* CollapsibleTableViewHeader.swift in Sources */,
 				6F3C4DEA206FE0A600F8B74C /* CollapsibleTableSectionViewController.swift in Sources */,
 				6F3C4DED206FEC6C00F8B74C /* AllViewModel.swift in Sources */,
 				6F3C4DE6206FD98C00F8B74C /* AllViewController.swift in Sources */,
-				6F3C4DF8207011D300F8B74C /* Group+CoreDataClass.swift in Sources */,
 				6F3C4D7E206FBD5B00F8B74C /* HourOfCode.xcdatamodeld in Sources */,
-				6F3C4DF9207011D300F8B74C /* User+CoreDataProperties.swift in Sources */,
 				BB8D2330206FC95C009E7B47 /* URLBuilder.swift in Sources */,
 				BB8D2332206FC971009E7B47 /* APIClient.swift in Sources */,
 				BB8D23392070123E009E7B47 /* LogInViewController.swift in Sources */,
 				BB8D233D2070301B009E7B47 /* Extensions.swift in Sources */,
 				BB8D2337206FE3FF009E7B47 /* VRTestViewController.swift in Sources */,
 				BB8D233B20701254009E7B47 /* SignUpViewController.swift in Sources */,
+				6F2F84D520709EF400B755EA /* DistrictObject.swift in Sources */,
 				6F3C4D76206FBD5B00F8B74C /* AppDelegate.swift in Sources */,
-				6F3C4DFA207011D300F8B74C /* School+CoreDataClass.swift in Sources */,
-				6F3C4DF6207011D300F8B74C /* User+CoreDataClass.swift in Sources */,
 				BB8D234A2070627B009E7B47 /* GroupObject.swift in Sources */,
-				6F3C4DF5207011D300F8B74C /* Group+CoreDataProperties.swift in Sources */,
 				BB8D2335206FE0C3009E7B47 /* LoginManager.swift in Sources */,
 				BB8D2348207058FF009E7B47 /* SchoolObject.swift in Sources */,
 			);
@@ -618,7 +634,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = HourOfCode/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/HourOfCode/Others/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kosiv.roksolana.HourOfCode;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -633,7 +649,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = HourOfCode/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/HourOfCode/Others/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kosiv.roksolana.HourOfCode;
 				PRODUCT_NAME = "$(TARGET_NAME)";

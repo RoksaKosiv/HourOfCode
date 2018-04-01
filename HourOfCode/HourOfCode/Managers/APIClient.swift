@@ -90,10 +90,10 @@ class APIClient {
                                     parameters: [String: Any]?, headers: [String: String]?,
                                     callback: @escaping (APIClientBoolCompletion)) {
         
-        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+       // UIApplication.shared.isNetworkActivityIndicatorVisible = true
         let request = sessionManager.request(path, method: method, parameters: parameters, encoding: JSONEncoding.default, headers: headers).validate().responseJSON { response in
             
-            UIApplication.shared.isNetworkActivityIndicatorVisible = false
+           // UIApplication.shared.isNetworkActivityIndicatorVisible = false
             
             switch response.result {
             case .success:
@@ -191,6 +191,10 @@ extension APIClient {
         }
     }
     
+    func getDistricts(callback: @escaping (APIClientBoolCompletion)) {
+        let params: JSONObject = ["filter" : ["include" : [ "relation" : "schools"]]]
+        performAuthorizedRequest(method: .get, path: URLBuilder.districtsPath, parameters: params, headers: [:], callback: callback)
+    }
     
     func getSchools(callback: @escaping (APIClientBoolCompletion)) {
         performAuthorizedRequest(method: .get, path: URLBuilder.schoolsPath, parameters: [:], headers: [:], callback: callback)

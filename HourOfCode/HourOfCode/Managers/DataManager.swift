@@ -11,6 +11,26 @@ import Foundation
 class DataManager {
     let apiClient = APIClient.sharedInstance
     
+    func getDiscticts(callback: @escaping (_ success: Bool ,_ districtsArray: [DistrictObject]?, _ message: String?) -> Void) {
+        
+        apiClient.getDistricts { (success, jsonObject, message) in
+            if success,
+                let jsonObject = jsonObject,
+                let dictrictArray = jsonObject[APIClientKeys.data] as? JSONArray {
+                var arrayOfDistricts: [DistrictObject] = []
+                for districtJson in dictrictArray {
+                    let school = DistrictObject(data: districtJson)
+                    arrayOfDistricts.append(school)
+                }
+                callback(success, arrayOfDistricts, "Successfully Obtained Districts")
+                
+            } else {
+                callback(success, [], nil)
+            }
+        }
+        
+    }
+    
     func getSchools(callback: @escaping (_ success: Bool ,_ schoolsArray: [SchoolObject]?, _ message: String?) -> Void) {
         
         apiClient.getSchools { (success, jsonObject, message) in

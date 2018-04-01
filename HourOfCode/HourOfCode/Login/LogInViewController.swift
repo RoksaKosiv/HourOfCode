@@ -58,7 +58,6 @@ class LogInViewController: UIViewController {
         }
         
         loginManager.logIn(email: email, password: password) { (success, message) in
-            
             if success {
                 self.presentOkAlertWithTitle(message, message: "", okActionHandler: { (_) in
                     
